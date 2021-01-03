@@ -1,13 +1,11 @@
-import { questTitle, answers } from './data/node_data.js';
+import { questTitle } from './data/node_data.js';
 
 import Common from './Components/Common.js';
 
 function App() {
-  console.log(questTitle);
-  console.log(answers);
   return (
     <div className="App">
-      <Common/>
+      <Common questions={ questTitle }/>
     </div>
   );
 }
