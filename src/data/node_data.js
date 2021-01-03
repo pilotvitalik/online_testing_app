@@ -208,19 +208,19 @@ let answers = [
 		id_answer: 1,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 1990,
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: 1995,
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: 2000,
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: 1993,
 			},
 		],
@@ -230,19 +230,19 @@ let answers = [
 		id_answer: 2,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '1 поток на 1 соединение приходящее на сервер',
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: '1000 потоков на 1 соединение приходящее на сервер',
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: '1 поток на 500 соединений приходящих на сервер',
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: '1000 потоков на 10000 соединений, приходящиъх на сервер',
 			},
 		],
@@ -252,19 +252,19 @@ let answers = [
 		id_answer: 3,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 1990,
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: 2010,
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: 2004,
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: 1998,
 			},
 		],
@@ -274,19 +274,19 @@ let answers = [
 		id_answer: 4,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'Без разницы сколько потоков. Все запросы асинхроны',
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: '1000 соединений на 1 поток. Возможно с помощью схемы Event Loop. Все запросы асинхроны',
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: '1 соединений на 1 поток. Возможно с помощью схемы Round Loop. Все запросы асинхроны',
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: 'Нет правильного ответа',
 			},
 		],
@@ -296,19 +296,19 @@ let answers = [
 		id_answer: 5,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'Используется слишком много памяти',
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: 'Больше обрабатывается соединений',
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: 'Небольшое использование памяти',
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: 'Сервер более новый',
 			},
 		],
@@ -318,19 +318,19 @@ let answers = [
 		id_answer: 6,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 2000,
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: 2015,
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: 2009,
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: 1990,
 			},
 		],
@@ -340,19 +340,19 @@ let answers = [
 		id_answer: 7,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'необлокирующий ввод/вывод',
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: 'использование М8 для запуска JS',
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: 'кросплатформенность',
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: 'все вышеуказанные варианты',
 			},
 		],
@@ -362,19 +362,19 @@ let answers = [
 		id_answer: 8,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'JS, скорость, простота, C++ binding, V8',
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: 'JS, простота, V8',
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: 'работа в режиме многозадачности',
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: 'нет правильного варианта',
 			},
 		],
@@ -384,19 +384,19 @@ let answers = [
 		id_answer: 9,
 		answer_arr: [
 			{
-				id:answer: ,
+				idAnswer: 1,
 				answer: 'связи C++',
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: 'вызов функции JS, написанной на C++',
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: 'использование JS внутри C++',
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: 'совместное использование C++ и C#',
 			},
 		],
@@ -406,19 +406,19 @@ let answers = [
 		id_answer: 10,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'версию NodeJS, чтобы понимать какие фичи использовались',
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: 'версию npm, чтобы не забыть её',
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: 'дату основного релиза, чтобы не про...ть дедлайн',
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: 'адрес папки, в которой находится исполняемый файл NodeJS',
 			},
 		],
@@ -428,27 +428,27 @@ let answers = [
 		id_answer: 11,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'открытый исходный код',
 			},
 			{
-				id:answer: 2,
+				idAnswer: 2,
 				answer: 'разработан Google',
 			},
 			{
-				id:answer: 3,
+				idAnswer: 3,
 				answer: 'запускается на разных ОС',
 			},
 			{
-				id:answer: 4,
+				idAnswer: 4,
 				answer: 'стандарты ECMAScript и WebAssembly',
 			},
 			{
-				id:answer: 5,
+				idAnswer: 5,
 				answer: 'написан на C++',
 			},
 			{
-				id:answer: 6,
+				idAnswer: 6,
 				answer: 'все варианты ответов',
 			},
 		],
@@ -458,7 +458,7 @@ let answers = [
 		id_answer: 12,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'менеджер версий NodeJS, который позволяется менять версии в зависимости от запрошенной версии',
 			}
 		],
@@ -468,7 +468,7 @@ let answers = [
 		id_answer: 13,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '- установить nvm; \n - nvm i node или nvm i node_version; \n - nvm use node_version;',
 			}
 		],
@@ -478,7 +478,7 @@ let answers = [
 		id_answer: 14,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '- Read Eval Print Loop; \n - возможность писать на JS словами',
 			}
 		],
@@ -488,7 +488,7 @@ let answers = [
 		id_answer: 15,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'проверка кода написанного на JS',
 			}
 		],
@@ -498,7 +498,7 @@ let answers = [
 		id_answer: 16,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'исп. крайнее значение',
 			}
 		],
@@ -508,7 +508,7 @@ let answers = [
 		id_answer: 17,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'Math. + TAB',
 			}
 		],
@@ -518,7 +518,7 @@ let answers = [
 		id_answer: 18,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '.help и .exit',
 			}
 		],
@@ -528,7 +528,7 @@ let answers = [
 		id_answer: 19,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '- создать файл.js; \n - добавить в него код; \n - запустить скрипт из консоли: \n node filename.js',
 			}
 		],
@@ -538,7 +538,7 @@ let answers = [
 		id_answer: 20,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '- nano filename.js - (редактирование в редакторе nano); \n - cat > filename.js - (редактирование в консоли); \n - > filename.js - (создание без редактирования)',
 			}
 		],
@@ -548,7 +548,7 @@ let answers = [
 		id_answer: 21,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'process.exit(code)  -> code - специальный код завершения процессов',
 			}
 		],
@@ -558,7 +558,7 @@ let answers = [
 		id_answer: 22,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'cross-env',
 			}
 		],
@@ -568,7 +568,7 @@ let answers = [
 		id_answer: 23,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '- уст. модуль cross-env; \n - в package.json добавить код в раздел скриптов: "scripts": "cross-env GREET=Hello node ./index.js"; \n - в index.js добавить код: console.log(process.env.GREET); \n - вызвать файл в терминале;',
 			}
 		],
@@ -578,7 +578,7 @@ let answers = [
 		id_answer: 24,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'в package.json добавить скрипт без исп. cross-env: "scripts": "cross-env GREET=Hello node ./index.js"',
 			}
 		],
@@ -588,7 +588,7 @@ let answers = [
 		id_answer: 25,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '- уст. модуль cross-env; \n - в index.js добавить код: console.log(process.env.GREET); \n - в терминале запустить код: GREET=Hello node index.js;',
 			}
 		],
@@ -598,7 +598,7 @@ let answers = [
 		id_answer: 26,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'process.argv',
 			}
 		],
@@ -608,7 +608,7 @@ let answers = [
 		id_answer: 27,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'абсолютный',
 			}
 		],
@@ -621,7 +621,7 @@ let answers = [
 		id_answer: 28,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'path',
 			}
 		],
@@ -631,7 +631,7 @@ let answers = [
 		id_answer: 29,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'path.resolve("./index.js")',
 			}
 		],
@@ -641,7 +641,7 @@ let answers = [
 		id_answer: 30,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'fs',
 			}
 		],
@@ -651,7 +651,7 @@ let answers = [
 		id_answer: 31,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'fs.watchFile()',
 			}
 		],
@@ -661,7 +661,7 @@ let answers = [
 		id_answer: 32,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '- интервал отслеживания; \n - текущее состояние; \n - предыдущее состояние;',
 			}
 		],
@@ -671,7 +671,7 @@ let answers = [
 		id_answer: 33,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'util',
 			}
 		],
@@ -681,7 +681,7 @@ let answers = [
 		id_answer: 34,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'совместно со встроенным методом в него',
 			}
 		],
@@ -691,7 +691,7 @@ let answers = [
 		id_answer: 35,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'os',
 			}
 		],
@@ -701,7 +701,7 @@ let answers = [
 		id_answer: 36,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'console.log(os.command_os)',
 			}
 		],
@@ -711,7 +711,7 @@ let answers = [
 		id_answer: 37,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'os.constants',
 			}
 		],
@@ -721,7 +721,7 @@ let answers = [
 		id_answer: 38,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'os.cpus()',
 			}
 		],
@@ -731,7 +731,7 @@ let answers = [
 		id_answer: 39,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'os.hostname()',
 			}
 		],
@@ -741,7 +741,7 @@ let answers = [
 		id_answer: 40,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'os.type()',
 			}
 		],
@@ -751,7 +751,7 @@ let answers = [
 		id_answer: 41,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '- Linux на Linux; \n - Darwin на macOs; \n - WindowsNT на windows',
 			}
 		],
@@ -761,7 +761,7 @@ let answers = [
 		id_answer: 42,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'os.userInfo()',
 			}
 		],
@@ -771,7 +771,7 @@ let answers = [
 		id_answer: 43,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'http',
 			}
 		],
@@ -781,7 +781,7 @@ let answers = [
 		id_answer: 44,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '1 сообщение на все запросы',
 			}
 		],
@@ -791,7 +791,7 @@ let answers = [
 		id_answer: 45,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'require("http").createServer((req, res) => res.end("Hello world")).listen(3000)',
 			}
 		],
@@ -801,7 +801,7 @@ let answers = [
 		id_answer: 46,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: '- модуль http; \n - модуль axios',
 			}
 		],
@@ -811,7 +811,7 @@ let answers = [
 		id_answer: 47,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'const http = require("http");\nhttp.get("url", (response) => {response.on("action", (...) => {...});})\n.on("error", (error) => {...})',
 			}
 		],
@@ -821,7 +821,7 @@ let answers = [
 		id_answer: 48,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'const axios = require("axios")\naxios.get("url").then(res=>...)',
 			}
 		],
@@ -831,7 +831,7 @@ let answers = [
 		id_answer: 49,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'querystring',
 			}
 		],
@@ -841,10 +841,13 @@ let answers = [
 		id_answer: 50,
 		answer_arr: [
 			{
-				id:answer: 1,
+				idAnswer: 1,
 				answer: 'Нет',
 			}
 		],
 		right_answer: 1,
 	},
 ];
+
+export { questTitle };
+export { answers };
