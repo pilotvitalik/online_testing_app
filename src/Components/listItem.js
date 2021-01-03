@@ -1,7 +1,8 @@
 function ListItem(props){
-	return <li>
-		{ props.val }
-	</li>
+	return <div>
+		<p>{ props.title }</p>
+		<p>{ props.answer }</p>
+	</div>
 }
 
 export default ListItem;
