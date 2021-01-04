@@ -1,5 +1,4 @@
 import ListItem from './listItem.js';
-
 import style from './common.module.css';
 
 function Common(props){

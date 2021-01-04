@@ -1,16 +1,16 @@
 import React, { useState, useRef } from 'react';
+import style from './listItem.module.css';
 
 function ListItem(props){
 	const id_question = 'quest-' + props.questId;
 
 	const [enterAnswer, setAnswer] = useState('');
+	const [hideAnswer, setDisplay] = useState(style.hiddenAnswer);
 	const rightAnswer = useRef(null);
 	
 	const checkAnswer = (val) => {
 		let answer = rightAnswer.current.innerText;
-		if (answer.includes(val, 0)){
-			console.log(true);
-		}
+		setDisplay('');
 	}
 
 	const getAnswer = (event) => {
@@ -29,7 +29,7 @@ function ListItem(props){
 			onChange={(event) => setAnswer(event.target.value)}
 			onKeyDown={getAnswer}
 		></textarea>
-		<p ref={ rightAnswer }>{ props.answer }</p>
+		<p ref={ rightAnswer } className={ hideAnswer }>{ props.answer }</p>
 	</div>
 }
 
