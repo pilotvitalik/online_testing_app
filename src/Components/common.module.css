@@ -1,0 +1,3 @@
+.common>div:not(:first-child){
+	display: none;
+}
