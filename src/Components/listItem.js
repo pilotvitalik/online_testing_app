@@ -1,18 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 function ListItem(props){
-	const [enterAnswer, setAnswer] = useState('');
-
 	const id_question = 'quest-' + props.questId;
+
+	const [enterAnswer, setAnswer] = useState('');
+	const rightAnswer = useRef(null);
+	
+	const checkAnswer = (val) => {
+		let answer = rightAnswer.current.innerText;
+		if (answer.includes(val, 0)){
+			console.log(true);
+		}
+	}
+
+	const getAnswer = (event) => {
+		let answer = '';
+		if (event.keyCode === 13){
+			answer = event.target.value;
+			checkAnswer(answer);
+		}
+	}
+
 	return <div>
 		<label htmlFor={ id_question }>{ props.title }</label>
-		<input 
-			type='text'
+		<textarea 
 			id={ id_question }
 			value={ enterAnswer }
 			onChange={(event) => setAnswer(event.target.value)}
-		/>
-		<p>{ props.answer }</p>
+			onKeyDown={getAnswer}
+		></textarea>
+		<p ref={ rightAnswer }>{ props.answer }</p>
 	</div>
 }
 
