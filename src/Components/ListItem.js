@@ -1,5 +1,6 @@
 import ItemAnswer from './ItemAnswer.js';
 import React, { useState } from 'react';
+import style from './listItem.module.css';
 
 function ListItem(props){
 	let mes;
@@ -23,7 +24,7 @@ function ListItem(props){
 
 	switch(answerRight){
 		case true:
-			mes = <React.Fragment><p>Верно</p><button type='button' onClick={ nextQuest }>Следующий вопрос</button></React.Fragment>;
+			mes = <React.Fragment><p className={ style.trueAnswer }>Верно</p><button type='button' onClick={ nextQuest }>Следующий вопрос</button></React.Fragment>;
 			break;
 		case false:
 			mes = <React.Fragment><p>Не верно</p><button type='button' onClick={ nextQuest }>Следующий вопрос</button></React.Fragment>;
@@ -43,10 +44,11 @@ function ListItem(props){
 	);
 
 	return <div data-ind={ props.dataInd }>
+		<h3>{ props.question }</h3>
 		<form>
 			{ listAnswer }
-			{ mes }
 		</form>
+		{ mes }
 	</div>
 }
 

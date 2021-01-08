@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ListItem from './listItem.js';
+import ListItem from './ListItem.js';
 import style from './common.module.css';
 
 function Common(props){
@@ -14,6 +14,7 @@ function Common(props){
 		index === startInd ?
 		<ListItem 
 			dataInd={ index }
+			question={item.name_quest}
 			key={ item.id_quest }
 			title={ item.name_quest }
 			answers={ item.answers }

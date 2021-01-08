@@ -181,7 +181,7 @@ let questTitle = [
 				answer: 'нет правильных ответов',
 			},
 		],
-		rightAnswer: 3,
+		rightAnswer: 2,
 	},
 	{
 		id_quest: 9,
@@ -549,7 +549,7 @@ let questTitle = [
 				answer: 'в package.json добавить скрипт без исп. cross-env: "scripts": "GREET=Hello node ./index.js"',
 			},
 		],
-		rightAnswer: 3,
+		rightAnswer: 4,
 	},
 	{
 		id_quest: 25,
@@ -794,7 +794,7 @@ let questTitle = [
 				answer: 'system',
 			},
 		],
-		rightAnswer: 2,
+		rightAnswer: 1,
 	},
 	{
 		id_quest: 36,
@@ -993,7 +993,7 @@ let questTitle = [
 		answers: [
 			{
 				id: 1,
-				answer: 'require("httpы").createServer((req, res) => res.end("Hello world")).listen(3000)',
+				answer: 'require("https").createServer((req, res) => res.end("Hello world")).listen(3000)',
 			},
 			{
 				id: 2,
@@ -1012,7 +1012,7 @@ let questTitle = [
 	},
 	{
 		id_quest: 46,
-		name_quest: 'Способы вполнения GET запроса',
+		name_quest: 'Способы выполнения GET запроса',
 		answers: [
 			{
 				id: 1,
