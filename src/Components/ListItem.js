@@ -18,7 +18,6 @@ function ListItem(props){
 
 	const nextQuest = () => {
 		const nextInd = props.dataInd + 1;
-		console.log(nextInd);
 		props.changeItem(nextInd);
 	}
 

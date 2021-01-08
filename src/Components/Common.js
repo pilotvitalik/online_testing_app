@@ -3,6 +3,7 @@ import ListItem from './ListItem.js';
 import style from './common.module.css';
 
 function Common(props){
+	let displayEl;
 	const quest = props.questions;
 	const [startInd, setStartInd] = useState(0);
 
@@ -23,9 +24,14 @@ function Common(props){
 			changeItem={ changeQuest }/>
 		: ''
 	);
+
+	const testDone = <h2>Тест пройден</h2>;
+
+	startInd !== quest.length ? displayEl = listItems : displayEl = testDone;
+
 	return (
 		<div className={ style.common }>
-			{ listItems }
+			{ displayEl }
 		</div>
 	);
 }
