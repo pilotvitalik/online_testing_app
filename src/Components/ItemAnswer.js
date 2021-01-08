@@ -1,4 +1,4 @@
-import React, { useState 	} from 'react';
+import React, { useState } from 'react';
 
 function ItemAnswer(props){
 	const nameAnsw = `quest-${ props.idQuest }`;
@@ -7,7 +7,7 @@ function ItemAnswer(props){
 
 	const checkVal = (event) => {
 		setActiveVal(event.target.value);
-		console.log(activeVal);
+		props.func(+activeVal);
 	}
 
 	return(
