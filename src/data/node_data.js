@@ -1117,6 +1117,738 @@ let questTitle = [
 		],
 		rightAnswer: 1,
 	},
+	{
+		id_quest: 51,
+		name_quest: 'Что такое Deno',
+		answers: [
+			{
+				id: 1,
+				answer: 'динозаврик',
+			},
+			{
+				id: 2,
+				answer: 'аналог NodeJS',
+			},
+			{
+				id: 3,
+				answer: 'другое название NodeJS',
+			},
+			{
+				id: 3,
+				answer: 'нет правильных ответов',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 52,
+		name_quest: 'определение Deno',
+		answers: [
+			{
+				id: 1,
+				answer: 'аналог NodeJS, более безопасный, позволяет более удобно работать с асинхронными запросами',
+			},
+			{
+				id: 2,
+				answer: 'сервер, позволяющий более удобно работать с асинхронными запросами',
+			},
+			{
+				id: 3,
+				answer: 'аналог NodeJS, позволяет более удобно работать с асинхронными запросами, уровень безопасности аналогичен NodeJS',
+			},
+			{
+				id: 4,
+				answer: 'аналог NodeJS, позволяет более удобно работать с синхронными запросами',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 53,
+		name_quest: 'Дата создания Deno',
+		answers: [
+			{
+				id: 1,
+				answer: '2015',
+			},
+			{
+				id: 2,
+				answer: '2010',
+			},
+			{
+				id: 3,
+				answer: '2018',
+			},
+			{
+				id: 4,
+				answer: '2020',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 54,
+		name_quest: 'Что такое CommonJS?',
+		answers: [
+			{
+				id: 1,
+				answer: 'JS для всех ПК',
+			},
+			{
+				id: 2,
+				answer: 'модульная система для NodeJS',
+			},
+			{
+				id: 3,
+				answer: 'аналог TypeScript',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 55,
+		name_quest: 'В чем особенность CommonJS?',
+		answers: [
+			{
+				id: 1,
+				answer: 'позволяет использовать одни и теже скрипты в браузере и на сервере',
+			},
+			{
+				id: 2,
+				answer: 'позволяет использовать скрипты в браузере',
+			},
+			{
+				id: 3,
+				answer: 'позволяет использовать скрипты на сервере',
+			},
+			{
+				id: 3,
+				answer: 'позволяет использовать одни и теже скрипты в JS и PHP',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 56,
+		name_quest: 'Чем является каждый скрипт (файл) для NodeJS?',
+		answers: [
+			{
+				id: 1,
+				answer: 'файлом',
+			},
+			{
+				id: 2,
+				answer: 'кодом',
+			},
+			{
+				id: 3,
+				answer: 'модулем',
+			},
+			{
+				id: 3,
+				answer: 'функцией',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 57,
+		name_quest: 'Способы экспорта на NodeJS',
+		answers: [
+			{
+				id: 1,
+				answer: 'export',
+			},
+			{
+				id: 2,
+				answer: 'export.function_name = (prop) => func_code; module.exports = class function_name{func_code};',
+			},
+			{
+				id: 3,
+				answer: 'export.function_name => {func_code}; module.exports = function_name{func_code};',
+			},
+			{
+				id: 4,
+				answer: 'export function(prop) {func_code}; module.exports = class function_name{func_code};',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 58,
+		name_quest: 'Импорт на NodeJS',
+		answers: [
+			{
+				id: 1,
+				answer: 'import',
+			},
+			{
+				id: 2,
+				answer: 'const test = require(name_module_export)',
+			},
+			{
+				id: 3,
+				answer: 'const func_name = require("./file.js")',
+			},
+			{
+				id: 4,
+				answer: 'import func_name ("./file.js")',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 59,
+		name_quest: 'Краткий порядок работы функции require',
+		answers: [
+			{
+				id: 1,
+				answer: 'принимает строку (путь до модуля); код модуля выполняется только 1 раз, а затем переиспользуется',
+			},
+			{
+				id: 2,
+				answer: 'принимает строку; возвращает экспортируемое значение функции; код модуля выполняется только 1 раз',
+			},
+			{
+				id: 3,
+				answer: 'принимает строку (путь до модуля); возвращает экспортируемое значение модуля; код модуля выполняется каждый раз, когда вызывается функция',
+			},
+			{
+				id: 4,
+				answer: 'принимает строку (путь до модуля); возвращает экспортируемое значение модуля; код модуля выполняется только 1 раз, а затем переиспользуется',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 60,
+		name_quest: 'Подробный порядок работы функции require',
+		answers: [
+			{
+				id: 1,
+				answer: 'Resolution -> Loading -> Wrapping -> Evaluation -> Caching',
+			},
+			{
+				id: 2,
+				answer: 'Loading -> Wrapping -> Evaluation -> Caching',
+			},
+			{
+				id: 3,
+				answer: 'Resolution -> Loading -> Evaluation -> Caching',
+			},
+			{
+				id: 4,
+				answer: 'Resolution -> Loading -> Wrapping -> Evaluation -> Setting',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 61,
+		name_quest: 'Что означает Resolving',
+		answers: [
+			{
+				id: 1,
+				answer: 'поиск модуля указанного при передаче',
+			},
+			{
+				id: 2,
+				answer: 'получение модуля по указанному адресу',
+			},
+			{
+				id: 3,
+				answer: 'поиск необходимого модуля',
+			},
+			{
+				id: 4,
+				answer: 'поиск модуля NodeJS',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 62,
+		name_quest: 'Что означает Loading',
+		answers: [
+			{
+				id: 1,
+				answer: 'загрузка модуля',
+			},
+			{
+				id: 2,
+				answer: 'загрузка и чтение модуля',
+			},
+			{
+				id: 3,
+				answer: 'чтение модуля',
+			},
+			{
+				id: 4,
+				answer: 'получение модуля',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 63,
+		name_quest: 'Что означает Wrapping',
+		answers: [
+			{
+				id: 1,
+				answer: 'обертывание в функцию для последующей передачи обратно',
+			},
+			{
+				id: 2,
+				answer: 'обертывание в функцию',
+			},
+			{
+				id: 3,
+				answer: 'передачи функции обратно',
+			},
+			{
+				id: 4,
+				answer: 'нет правильного варианта',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 64,
+		name_quest: 'Что означает Evaluation?',
+		answers: [
+			{
+				id: 1,
+				answer: 'выполнение',
+			},
+			{
+				id: 2,
+				answer: 'получение значения',
+			},
+			{
+				id: 3,
+				answer: 'вычисление',
+			},
+			{
+				id: 4,
+				answer: 'подъем состояния',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 65,
+		name_quest: 'Что означает caching?',
+		answers: [
+			{
+				id: 1,
+				answer: 'получение текущего кэша',
+			},
+			{
+				id: 2,
+				answer: 'очистка кэша',
+			},
+			{
+				id: 3,
+				answer: 'сохранение в кэше',
+			},
+			{
+				id: 4,
+				answer: 'очистка кэш браузера',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 66,
+		name_quest: 'Какими переменными являются __dirname и __filename и откуда они берутся?',
+		answers: [
+			{
+				id: 1,
+				answer: 'локальными, с сервера',
+			},
+			{
+				id: 1,
+				answer: 'глобальными, с сервера',
+			},
+			{
+				id: 1,
+				answer: 'глобальными, берутся из кэша',
+			},
+			{
+				id: 1,
+				answer: 'локальными, берутся из функции на шаге Wrapping',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 67,
+		name_quest: 'Основные св-ва exports',
+		answers: [
+			{
+				id: 1,
+				answer: 'ниоткуда не возвращается, ссылка на module.exports',
+			},
+			{
+				id: 2,
+				answer: 'возвращается c сервера',
+			},
+			{
+				id: 3,
+				answer: 'ниоткуда не возвращается, ссылка на глобальный объект exports',
+			},
+			{
+				id: 4,
+				answer: 'возвращается из module.exports, ссылка на module.exports',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 68,
+		name_quest: 'Основные св-ва module.exports',
+		answers: [
+			{
+				id: 1,
+				answer: 'глобальный объект, является тем, что возвращается из require',
+			},
+			{
+				id: 2,
+				answer: 'пустой объект',
+			},
+			{
+				id: 3,
+				answer: 'значения для exports',
+			},
+			{
+				id: 4,
+				answer: 'по умолчанию пустой объект, является тем, что возвращается из require',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 69,
+		name_quest: 'Основные этапы Resolving',
+		answers: [
+			{
+				id: 1,
+				answer: 'local module, node module',
+			},
+			{
+				id: 2,
+				answer: 'node module, local module, core module',
+			},
+			{
+				id: 3,
+				answer: 'core module, local module, node module',
+			},
+			{
+				id: 4,
+				answer: 'node module, core module, local module',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 70,
+		name_quest: 'Что такое streams?',
+		answers: [
+			{
+				id: 1,
+				answer: 'данные, которые можно обрабатывать частями',
+			},
+			{
+				id: 2,
+				answer: 'потоки; данные, которые можно обрабатывать частями',
+			},
+			{
+				id: 3,
+				answer: 'потоки',
+			},
+			{
+				id: 4,
+				answer: 'потоки; данные, которые можно обрабатывать полностью',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 71,
+		name_quest: 'Основной плюс streams?',
+		answers: [
+			{
+				id: 1,
+				answer: 'т.к. большой файл можно разбить на части для обработки, занятая оперативная память не особо увеличивается',
+			},
+			{
+				id: 2,
+				answer: 'занятая оперативная память не особо увеличивается',
+			},
+			{
+				id: 3,
+				answer: 'большой файл можно разбить на части для обработки',
+			},
+			{
+				id: 4,
+				answer: 'т.к. большой файл можно разбить на части для обработки, занятая оперативная память увеличивается в разы',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 72,
+		name_quest: 'Виды стримов',
+		answers: [
+			{
+				id: 1,
+				answer: 'Writable, Duplex, Transform',
+			},
+			{
+				id: 2,
+				answer: 'Readable, Writable, Duplex, Transform',
+			},
+			{
+				id: 3,
+				answer: 'Readable, Writable, Duplex, Triplex',
+			},
+			{
+				id: 4,
+				answer: 'Readable, ReWritable, Duplex, Transform',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 73,
+		name_quest: 'Что означает стрим Readable?',
+		answers: [
+			{
+				id: 1,
+				answer: 'Стрим, у которого данные читаются и записываются',
+			},
+			{
+				id: 2,
+				answer: 'Стрим, у которого данные читаются (текстовый файл, ввод с клавиатуры, аудио, видео)',
+			},
+			{
+				id: 3,
+				answer: 'Стрим, у которого данные читаются несколько раз',
+			},
+			{
+				id: 4,
+				answer: 'Стрим, у которого данные читаются (текстовый файл, ввод с клавиатуры)',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 74,
+		name_quest: 'Что означает стрим Writable?',
+		answers: [
+			{
+				id: 1,
+				answer: 'Стрим, в который можно записать данные, а затем прочитать',
+			},
+			{
+				id: 2,
+				answer: 'Стрим, в который можно записать данные на жесткий диск',
+			},
+			{
+				id: 3,
+				answer: 'Стрим, в который можно записать данные',
+			},
+			{
+				id: 4,
+				answer: 'Стрим, в который можно записать данные с шифрованием',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 75,
+		name_quest: 'Что означает стрим Duplex?',
+		answers: [
+			{
+				id: 1,
+				answer: 'Стрим, в который могут быть записаны данные',
+			},
+			{
+				id: 2,
+				answer: 'Стрим, в который могут быть записаны данные только 2 раза и прочитаны',
+			},
+			{
+				id: 3,
+				answer: 'Стрим, в который могут быть записаны данные и прочитаны',
+			},
+			{
+				id: 4,
+				answer: 'Стрим, в который могут быть записаны данные и прочитаны только 2 раза',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 76,
+		name_quest: 'Что означает стрим Transform?',
+		answers: [
+			{
+				id: 1,
+				answer: 'Стрим, который транформирует данные при чтении / записи',
+			},
+			{
+				id: 2,
+				answer: 'Стрим, который транформирует данные при чтении  и затем перевод их на другой язык',
+			},
+			{
+				id: 3,
+				answer: 'Стрим, который транформирует данные при чтении в другой формат',
+			},
+			{
+				id: 4,
+				answer: 'Стрим, который транформирует данные при записи в другой формат',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 77,
+		name_quest: 'Благодаря чему созданы стримы?',
+		answers: [
+			{
+				id: 1,
+				answer: 'EventLoop',
+			},
+			{
+				id: 2,
+				answer: 'EventEizenhaur',
+			},
+			{
+				id: 3,
+				answer: 'EventEmmitter',
+			},
+			{
+				id: 4,
+				answer: 'Emmitter',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 78,
+		name_quest: 'Что означает EventEmitter?',
+		answers: [
+			{
+				id: 1,
+				answer: 'паттерн прогнозирования',
+			},
+			{
+				id: 2,
+				answer: 'паттерн проектирования',
+			},
+			{
+				id: 3,
+				answer: 'цикл',
+			},
+			{
+				id: 4,
+				answer: 'паттерн разрешения',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 79,
+		name_quest: 'С помощью какого модуля и метода можно получить метаданые файла?',
+		answers: [
+			{
+				id: 1,
+				answer: 'fs.stat',
+			},
+			{
+				id: 2,
+				answer: 'fs.meta',
+			},
+			{
+				id: 3,
+				answer: 'fs.fileStat',
+			},
+			{
+				id: 4,
+				answer: 'fs.statData',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 80,
+		name_quest: 'Какой модуль работает с сжатием?',
+		answers: [
+			{
+				id: 1,
+				answer: 'elib',
+			},
+			{
+				id: 2,
+				answer: 'zlib',
+			},
+			{
+				id: 3,
+				answer: 'linRar',
+			},
+			{
+				id: 4,
+				answer: 'zip',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 81,
+		name_quest: 'Синтаксис разбиения файла',
+		answers: [
+			{
+				id: 1,
+				answer: 'const src = fs.createReadStream(file_name);',
+			},
+			{
+				id: 2,
+				answer: 'fs.readStream(file_name);',
+			},
+			{
+				id: 3,
+				answer: 'const src = fs.createStream(file_name);',
+			},
+			{
+				id: 4,
+				answer: 'нет правильного ответа',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 82,
+		name_quest: 'Метод для передачи данных между стримами',
+		answers: [
+			{
+				id: 1,
+				answer: 'file.ext(res);',
+			},
+			{
+				id: 2,
+				answer: 'file.move(res);',
+			},
+			{
+				id: 3,
+				answer: 'file.pipe(res);',
+			},
+			{
+				id: 4,
+				answer: 'fs.pipe(res);',
+			},
+		],
+		rightAnswer: 3,
+	},
 ];
 
 export { questTitle };
