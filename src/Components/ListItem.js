@@ -43,7 +43,7 @@ function ListItem(props){
 	);
 
 	return <div data-ind={ props.dataInd }>
-		<h3>{ props.question }</h3>
+		<h3>Вопрос № { props.idQuest }. { props.question }</h3>
 		<form>
 			{ listAnswer }
 		</form>
