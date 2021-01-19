@@ -7,6 +7,7 @@ function ListItem(props){
 	const answers = props.answers;
 
 	const [answerRight, isAnswerRight] = useState('');
+	const [questNumber, setQuestNum] = useState('');
 
 	const checkAnswer = (val) => {
 		if (val === props.rightAns){
@@ -19,6 +20,15 @@ function ListItem(props){
 	const nextQuest = () => {
 		const nextInd = props.dataInd + 1;
 		props.changeItem(nextInd);
+	}
+
+	const changeNum = (event) => {
+		console.log('changeNum');
+		console.log(event);
+		setQuestNum(event.target.value);
+		if (event.keyCode === 13){
+			props.changeItem(+questNumber);
+		}
 	}
 
 	switch(answerRight){
@@ -43,6 +53,11 @@ function ListItem(props){
 	);
 
 	return <div data-ind={ props.dataInd }>
+			<input
+				name='questNumber'
+				type='text'
+				value={ questNumber }
+				onChange={ changeNum }/>
 		<h3>Вопрос № { props.idQuest }. { props.question }</h3>
 		<form>
 			{ listAnswer }
