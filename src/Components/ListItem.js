@@ -23,11 +23,12 @@ function ListItem(props){
 	}
 
 	const changeNum = (event) => {
-		console.log('changeNum');
-		console.log(event);
-		setQuestNum(event.target.value);
+		setQuestNum(+event.target.value);
+	}
+
+	const updateQuest = (event) => {
 		if (event.keyCode === 13){
-			props.changeItem(+questNumber);
+			props.changeItem(questNumber - 1);
 		}
 	}
 
@@ -57,7 +58,8 @@ function ListItem(props){
 				name='questNumber'
 				type='text'
 				value={ questNumber }
-				onChange={ changeNum }/>
+				onChange={ changeNum }
+				onKeyDown={ updateQuest }/>
 		<h3>Вопрос № { props.idQuest }. { props.question }</h3>
 		<form>
 			{ listAnswer }

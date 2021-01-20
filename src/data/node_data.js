@@ -1326,7 +1326,7 @@ let questTitle = [
 		answers: [
 			{
 				id: 1,
-				answer: 'Resolution -> Loading -> Wrapping -> Evaluation -> Caching',
+				answer: 'Resolving -> Loading -> Wrapping -> Evaluation -> Caching',
 			},
 			{
 				id: 2,
@@ -1334,11 +1334,11 @@ let questTitle = [
 			},
 			{
 				id: 3,
-				answer: 'Resolution -> Loading -> Evaluation -> Caching',
+				answer: 'Resolving -> Loading -> Evaluation -> Caching',
 			},
 			{
 				id: 4,
-				answer: 'Resolution -> Loading -> Wrapping -> Evaluation -> Setting',
+				answer: 'Resolving -> Loading -> Wrapping -> Evaluation -> Setting',
 			},
 		],
 		rightAnswer: 1,
@@ -1467,15 +1467,15 @@ let questTitle = [
 				answer: 'локальными, с сервера',
 			},
 			{
-				id: 1,
+				id: 2,
 				answer: 'глобальными, с сервера',
 			},
 			{
-				id: 1,
+				id: 3,
 				answer: 'глобальными, берутся из кэша',
 			},
 			{
-				id: 1,
+				id: 4,
 				answer: 'локальными, берутся из функции на шаге Wrapping',
 			},
 		],
