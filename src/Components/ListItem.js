@@ -8,9 +8,10 @@ function ListItem(props){
 
 	const [answerRight, isAnswerRight] = useState('');
 	const [questNumber, setQuestNum] = useState('');
+	const [num, setNum] = useState();
 
-	const checkAnswer = (val) => {
-		if (val === props.rightAns){
+	const checkAnswer = () => {
+		if (num === props.rightAns){
 			isAnswerRight(true);
 			return false;
 		}
@@ -32,6 +33,10 @@ function ListItem(props){
 		}
 	}
 
+	const checkVal = (val) => {
+		console.log(num);
+	}
+
 	switch(answerRight){
 		case true:
 			mes = <React.Fragment><p className={ style.trueAnswer }>Верно</p><button type='button' onClick={ nextQuest }>Следующий вопрос</button></React.Fragment>;
@@ -50,20 +55,25 @@ function ListItem(props){
 			val={ answer.answer }
 			idQuest={ props.idQuest }
 			idAnsw={ answer.id }
-			func={ checkAnswer }/>
+			func={ setNum }/>
 	);
 
 	return <div data-ind={ props.dataInd }>
-			<input
-				name='questNumber'
-				type='text'
-				value={ questNumber }
-				onChange={ changeNum }
-				onKeyDown={ updateQuest }/>
+		<input
+			name='questNumber'
+			type='text'
+			value={ questNumber }
+			onChange={ changeNum }
+			onKeyDown={ updateQuest }/>
 		<h3>Вопрос № { props.idQuest }. { props.question }</h3>
 		<form>
 			{ listAnswer }
 		</form>
+		<button
+			type='button'
+			onClick={ checkAnswer }>
+			Проверить
+		</button>
 		{ mes }
 	</div>
 }
