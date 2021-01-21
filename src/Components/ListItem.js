@@ -33,8 +33,9 @@ function ListItem(props){
 		}
 	}
 
-	const checkVal = (val) => {
-		console.log(num);
+	const checkVal = (event) => {
+		setNum(+event.target.value);
+		checkAnswer();
 	}
 
 	switch(answerRight){
@@ -55,7 +56,8 @@ function ListItem(props){
 			val={ answer.answer }
 			idQuest={ props.idQuest }
 			idAnsw={ answer.id }
-			func={ setNum }/>
+			func={ setNum }
+			checkAnsw={ checkVal }/>
 	);
 
 	return <div data-ind={ props.dataInd }>
