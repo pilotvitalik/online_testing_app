@@ -9,6 +9,7 @@ function ListItem(props){
 	const [answerRight, isAnswerRight] = useState('');
 	const [questNumber, setQuestNum] = useState('');
 	const [num, setNum] = useState();
+	const [questType, setQuestType] = useState(0);
 
 	const checkAnswer = () => {
 		if (num === props.rightAns){
@@ -38,6 +39,10 @@ function ListItem(props){
 		checkAnswer();
 	}
 
+	const changeType = (event) => {
+		setQuestType(+event.target.value);
+	}
+
 	switch(answerRight){
 		case true:
 			mes = <React.Fragment><p className={ style.trueAnswer }>Верно</p><button type='button' onClick={ nextQuest }>Следующий вопрос</button></React.Fragment>;
@@ -61,12 +66,48 @@ function ListItem(props){
 	);
 
 	return <div data-ind={ props.dataInd }>
-		<input
-			name='questNumber'
-			type='text'
-			value={ questNumber }
-			onChange={ changeNum }
-			onKeyDown={ updateQuest }/>
+		<div>
+			<label htmlFor='setNumQuest'>
+				Введите номер вопроса: 
+			</label>
+			<input
+				id='setNumQuest'
+				name='questNumber'
+				type='text'
+				value={ questNumber }
+				onChange={ changeNum }
+				onKeyDown={ updateQuest }/>
+		</div>
+		<div>
+			<p>Выберите поярдок вопросов:</p>
+			<form>
+				<div>
+					<input 
+						id='typeQueue-1'
+						type='radio'
+						value='0'
+						name='queueQuest'
+						defaultChecked='cheked'
+						onClick={ setQuestType(+event.target.value); }/>
+					<label 
+						htmlFor='typeQueue-1'>
+						по порядку
+					</label>
+				</div>
+				<div>
+					<input 
+						id='typeQueue-2'
+						type='radio'
+						value='1'
+						name='queueQuest'
+						onClick={ setQuestType(+event.target.value); }/>
+					<label 
+						htmlFor='typeQueue-2'>
+						в перемешку
+					</label>
+				</div>
+			</form>
+		</div>
 		<h3>Вопрос № { props.idQuest }. { props.question }</h3>
 		<form>
 			{ listAnswer }
