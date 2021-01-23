@@ -9,6 +9,8 @@ function ListItem(props){
 	const [answerRight, isAnswerRight] = useState('');
 	const [questNumber, setQuestNum] = useState('');
 	const [num, setNum] = useState();
+	const [inOrder, setInOrder] = useState('0');
+	const [inMix, setInMix] = useState('');
 	const [questType, setQuestType] = useState(0);
 
 	const checkAnswer = () => {
@@ -39,8 +41,16 @@ function ListItem(props){
 		checkAnswer();
 	}
 
-	const changeType = (event) => {
-		setQuestType(+event.target.value);
+	const changeTypeOrder = (event) => {
+		setInOrder(+event.target.value);
+		console.log('setInOrder');
+		console.log(inOrder);
+	}
+
+	const changeTypeMix = (event) => {
+		setInMix(+event.target.value);
+		console.log('setInMix');
+		console.log(inMix);
 	}
 
 	switch(answerRight){
@@ -87,8 +97,8 @@ function ListItem(props){
 						type='radio'
 						value='0'
 						name='queueQuest'
-						defaultChecked='cheked'
-						onClick={ setQuestType(+event.target.value); }/>
+						defaultChecked={ inOrder !== '' }
+						onClick={ changeTypeOrder }/>
 					<label 
 						htmlFor='typeQueue-1'>
 						по порядку
@@ -100,7 +110,8 @@ function ListItem(props){
 						type='radio'
 						value='1'
 						name='queueQuest'
-						onClick={ setQuestType(+event.target.value); }/>
+						defaultChecked={ inMix !== '' }
+						onClick={ changeTypeMix }/>
 					<label 
 						htmlFor='typeQueue-2'>
 						в перемешку
