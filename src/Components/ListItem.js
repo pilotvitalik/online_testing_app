@@ -11,7 +11,6 @@ function ListItem(props){
 	const [num, setNum] = useState();
 	const [inOrder, setInOrder] = useState('0');
 	const [inMix, setInMix] = useState('');
-	const [questType, setQuestType] = useState(0);
 
 	const checkAnswer = () => {
 		if (num === props.rightAns){
@@ -43,14 +42,11 @@ function ListItem(props){
 
 	const changeTypeOrder = (event) => {
 		setInOrder(+event.target.value);
-		console.log('setInOrder');
-		console.log(inOrder);
 	}
 
 	const changeTypeMix = (event) => {
 		setInMix(+event.target.value);
-		console.log('setInMix');
-		console.log(inMix);
+		props.changeType();
 	}
 
 	switch(answerRight){
