@@ -8,8 +8,6 @@ function ListItem(props){
 
 	const [answerRight, isAnswerRight] = useState('');
 	const [num, setNum] = useState();
-	const [inOrder, setInOrder] = useState('0');
-	const [inMix, setInMix] = useState('');
 
 	const checkAnswer = () => {
 		if (num === props.rightAns){
@@ -27,15 +25,6 @@ function ListItem(props){
 	const checkVal = (event) => {
 		setNum(+event.target.value);
 		checkAnswer();
-	}
-
-	const changeTypeOrder = (event) => {
-		setInOrder(+event.target.value);
-	}
-
-	const changeTypeMix = (event) => {
-		setInMix(+event.target.value);
-		props.changeType();
 	}
 
 	switch(answerRight){
@@ -61,37 +50,6 @@ function ListItem(props){
 	);
 
 	return <div data-ind={ props.dataInd }>
-		<div>
-			<p>Выберите поярдок вопросов:</p>
-			<form>
-				<div>
-					<input 
-						id='typeQueue-1'
-						type='radio'
-						value='0'
-						name='queueQuest'
-						defaultChecked={ inOrder !== '' }
-						onClick={ changeTypeOrder }/>
-					<label 
-						htmlFor='typeQueue-1'>
-						по порядку
-					</label>
-				</div>
-				<div>
-					<input 
-						id='typeQueue-2'
-						type='radio'
-						value='1'
-						name='queueQuest'
-						defaultChecked={ inMix !== '' }
-						onClick={ changeTypeMix }/>
-					<label 
-						htmlFor='typeQueue-2'>
-						в перемешку
-					</label>
-				</div>
-			</form>
-		</div>
 		<h3>Вопрос № { props.idQuest }. { props.question }</h3>
 		<form>
 			{ listAnswer }

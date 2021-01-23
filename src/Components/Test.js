@@ -7,13 +7,6 @@ function Test(props){
 	let displayEl;
 	const quest = props.questions;
 
-	const changeType = () => {
-		for (let i = quest.length - 1; i > 0; i--) {
-			let j = Math.floor(Math.random() * (i + 1));
-		    [quest[i], quest[j]] = [quest[j], quest[i]];
-		}
-	}
-
 	const listItems = quest.map((item, index) => 
 		index === props.startInd ?
 		<ListItem 
@@ -24,8 +17,7 @@ function Test(props){
 			answers={ item.answers }
 			rightAns={ item.rightAnswer }
 			idQuest={ item.id_quest }
-			changeItem={ props.changeItem }
-			changeType={ changeType }/>
+			changeItem={ props.changeItem }/>
 		: ''
 	);
 
