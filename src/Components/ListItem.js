@@ -7,7 +7,6 @@ function ListItem(props){
 	const answers = props.answers;
 
 	const [answerRight, isAnswerRight] = useState('');
-	const [questNumber, setQuestNum] = useState('');
 	const [num, setNum] = useState();
 	const [inOrder, setInOrder] = useState('0');
 	const [inMix, setInMix] = useState('');
@@ -23,16 +22,6 @@ function ListItem(props){
 	const nextQuest = () => {
 		const nextInd = props.dataInd + 1;
 		props.changeItem(nextInd);
-	}
-
-	const changeNum = (event) => {
-		setQuestNum(+event.target.value);
-	}
-
-	const updateQuest = (event) => {
-		if (event.keyCode === 13){
-			props.changeItem(questNumber - 1);
-		}
 	}
 
 	const checkVal = (event) => {
@@ -72,18 +61,6 @@ function ListItem(props){
 	);
 
 	return <div data-ind={ props.dataInd }>
-		<div>
-			<label htmlFor='setNumQuest'>
-				Введите номер вопроса: 
-			</label>
-			<input
-				id='setNumQuest'
-				name='questNumber'
-				type='text'
-				value={ questNumber }
-				onChange={ changeNum }
-				onKeyDown={ updateQuest }/>
-		</div>
 		<div>
 			<p>Выберите поярдок вопросов:</p>
 			<form>
