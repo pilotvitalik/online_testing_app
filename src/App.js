@@ -1,11 +1,11 @@
 import { questTitle } from './data/node_data.js';
 
-import Common from './Components/Common.js';
+import Main from './Components/Main.js';
 
 function App() {
   return (
     <div className="App">
-      <Common questions={ questTitle }/>
+      <Main questions={ questTitle }/>
     </div>
   );
 }

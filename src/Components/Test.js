@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import ListItem from './ListItem.js';
-import style from './common.module.css';
+import style from './test.module.css';
 
-function Common(props){
+function Test(props){
 	let displayEl;
 	const quest = props.questions;
 	const [startInd, setStartInd] = useState(0);
@@ -45,4 +45,4 @@ function Common(props){
 	);
 }
 
-export default Common;
+export default Test;
