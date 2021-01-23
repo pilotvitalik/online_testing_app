@@ -6,9 +6,18 @@ function Common(props){
 	let displayEl;
 	const quest = props.questions;
 	const [startInd, setStartInd] = useState(0);
+	console.log(quest);
 
 	const changeQuest = (val) => {
 		setStartInd(val);
+	}
+
+	const changeType = () => {
+		for (let i = quest.length - 1; i > 0; i--) {
+		    let j = Math.floor(Math.random() * (i + 1));
+		    [quest[i], quest[j]] = [quest[j], quest[i]];
+		  }
+		 console.log(quest);
 	}
 
 	const listItems = quest.map((item, index) => 
@@ -21,7 +30,8 @@ function Common(props){
 			answers={ item.answers }
 			rightAns={ item.rightAnswer }
 			idQuest={ item.id_quest }
-			changeItem={ changeQuest }/>
+			changeItem={ changeQuest }
+			changeType={ changeType }/>
 		: ''
 	);
 
