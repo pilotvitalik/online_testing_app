@@ -1,4 +1,4 @@
-let questTitle = [
+let nodeQuest = [
 	{
 		id_quest: 1,
 		name_quest: 'Дата основания сервера Apache?',
@@ -1851,4 +1851,4 @@ let questTitle = [
 	},
 ];
 
-export { questTitle };
+export { nodeQuest };
