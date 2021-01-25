@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SelectType from './SelectType.js';
 import Test from './Test.js';
 import SetParam from './SetParam.js';
 import 	{
@@ -27,6 +28,9 @@ function Main(props){
 		<Router>
 			<Switch>
 				<Route exact path='/'>
+					<SelectType/>
+				</Route>
+				<Route path='/param'>
 					<SetParam questions={ quest } changeItem={ changeQuest } changeType={ changeType }/>
 				</Route>
 				<Route path='/test'>
