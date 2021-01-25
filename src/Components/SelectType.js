@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class SelectType extends Component{
 	constructor(props){
 		super(props);
+		this.tableContents = this.props.tableContents;
 		this.setParam = this.setParam.bind(this);
 	}
 
@@ -12,6 +13,7 @@ class SelectType extends Component{
 	}
 
 	render() {
+		console.log(this.tableContents);
 		return (
 			<button
 				type='button'

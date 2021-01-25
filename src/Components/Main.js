@@ -10,7 +10,8 @@ import 	{
 
 
 function Main(props){
-	const quest = props.questions;
+	const quest = props.nodeQuestions;
+	const tableContents = props.tableContents;
 	const [startInd, setStartInd] = useState(0);
 
 	const changeQuest = (val) => {
@@ -28,7 +29,7 @@ function Main(props){
 		<Router>
 			<Switch>
 				<Route exact path='/'>
-					<SelectType/>
+					<SelectType tableContents={ tableContents }/>
 				</Route>
 				<Route path='/param'>
 					<SetParam questions={ quest } changeItem={ changeQuest } changeType={ changeType }/>
