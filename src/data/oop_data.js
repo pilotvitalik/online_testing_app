@@ -225,6 +225,234 @@ let oopQuest = [
 		],
 		rightAnswer: 1,
 	},
+
+
+	{
+		id_quest: 11,
+		name_quest: 'Где находится указатель на объект прототипа',
+		answers: [
+			{
+				id: 1,
+				answer: 'внутри описания объекта',
+			},
+			{
+				id: 2,
+				answer: 'в консоли браузера',
+			},
+			{
+				id: 3,
+				answer: 'в консоли браузера, под писанием объекта',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 12,
+		name_quest: 'Как обозначается объект прототипа?',
+		answers: [
+			{
+				id: 1,
+				answer: '__proto__',
+			},
+			{
+				id: 2,
+				answer: '__parent__',
+			},
+			{
+				id: 3,
+				answer: '__objProto__',
+			},
+			{
+				id: 4,
+				answer: '__proto__',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 13,
+		name_quest: 'Какой тип програмирования является основой ООП в JS',
+		answers: [
+			{
+				id: 1,
+				answer: 'классовое',
+			},
+			{
+				id: 2,
+				answer: 'прототипное',
+			},
+			{
+				id: 3,
+				answer: 'передовое',
+			},
+			{
+				id: 4,
+				answer: 'межрассовое',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 14,
+		name_quest: 'Способы наследования в прототипном ООП',
+		answers: [
+			{
+				id: 1,
+				answer: 'указать __proto__: a (объект a является прототипом при наследовании)',
+			},
+			{
+				id: 2,
+				answer: 'копирование всех свойств;',
+			},
+			{
+				id: 3,
+				answer: 'указать __parent__: a (объект a является прототипом при наследовании)',
+			},
+			{
+				id: 4,
+				answer: 'копирование всех свойств; указать __proto__: a (объект a является прототипом при наследовании)',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 15,
+		name_quest: 'Что указывается в качестве прототипа, при выводе в консоли наследуемого объекта?',
+		answers: [
+			{
+				id: 1,
+				answer: 'объект, от которого наследуются свойства и методы',
+			},
+			{
+				id: 2,
+				answer: 'объект прототип',
+			},
+			{
+				id: 3,
+				answer: 'undefined',
+			},
+			{
+				id: 4,
+				answer: 'самый первый объект в программе',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 16,
+		name_quest: 'Синтаксис добавления метода в объект',
+		answers: [
+			{
+				id: 1,
+				answer: 'show: (){...}',
+			},
+			{
+				id: 2,
+				answer: 'function(){...}',
+			},
+			{
+				id: 3,
+				answer: 'show: function(){...}',
+			},
+			{
+				id: 4,
+				answer: 'сshow: func_name(){...}',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 17,
+		name_quest: 'Синтаксис вызова метода объекта',
+		answers: [
+			{
+				id: 1,
+				answer: 'obj.func;',
+			},
+			{
+				id: 2,
+				answer: 'func.obj();',
+			},
+			{
+				id: 3,
+				answer: 'obj.func();',
+			},
+			{
+				id: 4,
+				answer: 'obj[func()];',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 18,
+		name_quest: 'Что такое прототип?',
+		answers: [
+			{
+				id: 1,
+				answer: 'основной объект-родитель (пример: чертеж)',
+			},
+			{
+				id: 2,
+				answer: 'основной объект (пример: чертеж)',
+			},
+			{
+				id: 3,
+				answer: 'объект из кода JS (пример: чертеж)',
+			},
+			{
+				id: 4,
+				answer: 'основной класс (пример: чертеж)',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 19,
+		name_quest: 'Что будет выводится, если после создания объекта, содержимое переменной поменять на строку/число?',
+		answers: [
+			{
+				id: 1,
+				answer: 'null',
+			},
+			{
+				id: 2,
+				answer: 'undefined',
+			},
+			{
+				id: 3,
+				answer: 'пустая строка',
+			},
+			{
+				id: 4,
+				answer: 'object undefined',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 20,
+		name_quest: 'Что такое __proto__?',
+		answers: [
+			{
+				id: 1,
+				answer: 'setter для объекта',
+			},
+			{
+				id: 2,
+				answer: 'getter, для объекта',
+			},
+			{
+				id: 3,
+				answer: 'getter, setter для объекта',
+			},
+			{
+				id: 4,
+				answer: 'кодовое слово для объекта',
+			},
+		],
+		rightAnswer: 3,
+	},
 ];
 
 export { oopQuest };

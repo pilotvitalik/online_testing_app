@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import ListContent from './ListContent.js';
 
 class SelectType extends Component{
 	constructor(props){
 		super(props);
-		this.tableContents = this.props.tableContents;
 		this.setParam = this.setParam.bind(this);
 	}
 
@@ -13,13 +12,20 @@ class SelectType extends Component{
 	}
 
 	render() {
-		console.log(this.tableContents);
+		console.log(this.props.tableContents);
+		const table = this.props.tableContents;
+		const showTable = table.map((item) => 
+			<ListContent key={ item.id_test } val={ item.test_name } url={ item.url_param } idKey={ item.id_test }/>
+		);
 		return (
-			<button
-				type='button'
-				onClick={ this.setParam }>
-				Выбрать параметры
-			</button>
+			<React.Fragment>
+				{ showTable }
+				<button
+					type='button'
+					onClick={ this.setParam }>
+					Выбрать параметры
+				</button>
+			</React.Fragment>
 		);
 	}
 }
