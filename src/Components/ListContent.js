@@ -1,5 +1,14 @@
+import { useState } from 'react';
+
 function ListContent(props){
 	const testType = props.url;
+
+	const [url, setUrl] = useState(props.url);
+
+	const defineUrl = (event) => {
+		setUrl(event.target.value);
+		props.func(url);
+	}
 
 	return (
 		<div>
@@ -8,7 +17,8 @@ function ListContent(props){
 				id={ props.url + '-' + props.idKey }
 				name='typeTest'
 				value={ props.url }
-				defaultChecked={ testType === 'node' }/>
+				defaultChecked={ testType === 'node' }
+				onClick={ defineUrl }/>
 			<label 
 				htmlFor={ props.url + '-' + props.idKey }>
 				{ props.val }
