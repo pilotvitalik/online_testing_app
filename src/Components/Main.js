@@ -10,12 +10,25 @@ import 	{
 
 
 function Main(props){
-	const quest = props.nodeQuestions;
 	const tableContents = props.tableContents;
 	const [startInd, setStartInd] = useState(0);
+	const [quest, setQuest] = useState(props.nodeQuestions);
 
 	const changeQuest = (val) => {
+		console.log(val);
 		setStartInd(val);
+	}
+
+	const defType = (type) => {
+		if (type !== 'node'){
+			changeQuestType();
+			return false;
+		}
+		setQuest(props.nodeQuestions);
+	}
+
+	const changeQuestType = () => {
+		setQuest(props.oopQuestions);
 	}
 
 	const changeType = () => {
@@ -29,10 +42,10 @@ function Main(props){
 		<Router>
 			<Switch>
 				<Route exact path='/'>
-					<SelectType tableContents={ tableContents }/>
+					<SelectType tableContents={ tableContents } defType={ defType }/>
 				</Route>
 				<Route path='/param'>
-					<SetParam questions={ quest } changeItem={ changeQuest } changeType={ changeType }/>
+					<SetParam changeItem={ changeQuest } changeType={ changeType }/>
 				</Route>
 				<Route path='/test'>
 					<Test questions={ quest } changeItem={ changeQuest } startInd={ startInd }/>

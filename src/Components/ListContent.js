@@ -8,6 +8,7 @@ function ListContent(props){
 	const defineUrl = (event) => {
 		setUrl(event.target.value);
 		props.func(url);
+		props.defType(url);
 	}
 
 	return (
