@@ -4,15 +4,18 @@ import ListContent from './ListContent.js';
 class SelectType extends Component{
 	constructor(props){
 		super(props);
+		this.state = {
+			param: 'node',
+		};
 		this.setParam = this.setParam.bind(this);
 	}
 
 	setParam(){
-		document.location.href = '/param';
+		document.location.href = `/param/${ this.state.param }`;
 	}
 
 	defUrl(urlPage){
-		console.log(urlPage);
+		this.state.param = urlPage
 	}
 
 	render() {
