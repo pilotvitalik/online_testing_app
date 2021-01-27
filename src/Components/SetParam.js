@@ -3,8 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function SetParam(props) {
 	const [questNumber, setQuestNum] = useState('');
-	const [inOrder, setInOrder] = useState('0');
-	const [inMix, setInMix] = useState('');
+	const [order, setOrder] = useState('inOrder');
 	const location = useLocation();
 	const url = `/test/${ location.state.test_page }`;
 
@@ -13,15 +12,31 @@ function SetParam(props) {
 	}
 
 	const updateQuest = () => {
-		(questNumber !== '') ? props.changeItem(questNumber - 1) : props.changeType(inMix, location.state.test_page);
+		(questNumber !== '') ? props.changeItem(questNumber - 1) : props.changeType(order, location.state.test_page);
+	}
+
+	const resetVal = () => {
+		setOrder('inOrder');
 	}
 
 	const changeTypeOrder = (event) => {
-		setInOrder(+event.target.value);
+		if (questNumber !== ''){
+			alert('Нельзя изменять выбранные занчение при указанном номере билета');
+			resetVal();
+			return false;
+		}
+		setOrder('inOrder');
 	}
 
 	const changeTypeMix = (event) => {
-		setInMix(+event.target.value);
+		console.log(questNumber);
+		if (questNumber !== ''){
+			alert('Нельзя изменять выбранные занчение при указанном номере билета');
+			resetVal();
+			return false;
+		}
+		console.log(38)
+		setOrder('inMix');
 	}
 
 	return (
@@ -46,8 +61,8 @@ function SetParam(props) {
 							type='radio'
 							value='0'
 							name='queueQuest'
-							defaultChecked={ inOrder !== '' }
-							onClick={ changeTypeOrder }/>
+							checked={ order === 'inOrder' }
+							onChange={ changeTypeOrder }/>
 						<label 
 							htmlFor='typeQueue-1'>
 							по порядку
@@ -59,8 +74,8 @@ function SetParam(props) {
 							type='radio'
 							value='1'
 							name='queueQuest'
-							defaultChecked={ inMix !== '' }
-							onClick={ changeTypeMix }/>
+							checked={ order === 'inMix' }
+							onChange={ changeTypeMix }/>
 						<label 
 							htmlFor='typeQueue-2'>
 							в перемешку

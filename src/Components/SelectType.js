@@ -21,7 +21,6 @@ class SelectType extends Component{
 	}
 
 	render() {
-		console.log(this.props.tableContents);
 		const table = this.props.tableContents;
 		const showTable = table.map((item) => 
 			<ListContent key={ item.id_test } val={ item.test_name } url={ item.url_param } idKey={ item.id_test } func={ this.defUrl.bind(this) }/>

@@ -32,7 +32,7 @@ function Main(props){
 
 	const changeType = (isMix, nameTest) => {
 		defType(nameTest);
-		if (isMix === ''){
+		if (isMix === 'inOrder'){
 			quest.sort((a, b) => {
 				return a.id_quest - b.id_quest;
 			});
