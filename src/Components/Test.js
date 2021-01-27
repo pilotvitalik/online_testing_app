@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import ListItem from './ListItem.js';
+import ShowNumQuest from './ShowNumQuest.js';
 import style from './test.module.css';
 
 function Test(props){
@@ -26,6 +27,7 @@ function Test(props){
 
 	return (
 		<div className={ style.common }>
+			<ShowNumQuest quest={ quest }/>
 			{ displayEl }
 			<button
 				type='button'>

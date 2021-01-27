@@ -1,0 +1,20 @@
+ul{
+	display: flex;
+	justify-content: space-between;
+	padding-left: 0;
+}
+
+.numQuest{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border: 1px solid grey;
+}
+
+.numQuest:hover{
+	cursor: pointer;
+	background: grey;
+}
