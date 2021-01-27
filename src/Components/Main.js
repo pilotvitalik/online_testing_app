@@ -15,7 +15,6 @@ function Main(props){
 	const [quest, setQuest] = useState(props.nodeQuestions);
 
 	const changeQuest = (val) => {
-		console.log(val);
 		setStartInd(val);
 	}
 
@@ -31,7 +30,13 @@ function Main(props){
 		setQuest(props.oopQuestions);
 	}
 
-	const changeType = () => {
+	const changeType = (isMix) => {
+		if (isMix === ''){
+			quest.sort((a, b) => {
+				return a.id_quest - b.id_quest;
+			});
+			return false;
+		}
 		for (let i = quest.length - 1; i > 0; i--) {
 			let j = Math.floor(Math.random() * (i + 1));
 		    [quest[i], quest[j]] = [quest[j], quest[i]];

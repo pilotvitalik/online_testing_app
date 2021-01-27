@@ -13,7 +13,8 @@ function SetParam(props) {
 	}
 
 	const updateQuest = () => {
-		(questNumber !== '') ? props.changeItem(questNumber - 1) : props.changeType();
+		console.log(questNumber);
+		(questNumber !== '') ? props.changeItem(questNumber - 1) : props.changeType(inMix);
 	}
 
 	const changeTypeOrder = (event) => {
