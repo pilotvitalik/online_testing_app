@@ -6,7 +6,8 @@ ul{
 	padding-left: 0;
 }
 
-.numQuest{
+.numQuest,
+.doneQuest{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -14,9 +15,14 @@ ul{
 	width: 20px;
 	height: 20px;
 	border: 1px solid grey;
+	list-style-type: none;
 }
 
 .numQuest:hover{
 	cursor: pointer;
+	background: grey;
+}
+
+.doneQuest{
 	background: grey;
 }
