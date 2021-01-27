@@ -27,7 +27,7 @@ function Test(props){
 
 	return (
 		<div className={ style.common }>
-			<ShowNumQuest quest={ quest } startInd={ props.startInd }/>
+			<ShowNumQuest quest={ quest } startQuest={ props.startQuest }/>
 			{ displayEl }
 			<button
 				type='button'>
