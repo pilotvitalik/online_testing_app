@@ -12,7 +12,7 @@ function SetParam(props) {
 	}
 
 	const updateQuest = () => {
-		(questNumber !== '') ? props.changeItem(questNumber - 1) : props.changeType(order, location.state.test_page);
+		(questNumber !== '') ? props.changeItem(questNumber - 1) : props.changeItem(0); props.changeType(order, location.state.test_page, questNumber);
 	}
 
 	const resetVal = () => {
@@ -29,13 +29,11 @@ function SetParam(props) {
 	}
 
 	const changeTypeMix = (event) => {
-		console.log(questNumber);
 		if (questNumber !== ''){
 			alert('Нельзя изменять выбранные занчение при указанном номере билета');
 			resetVal();
 			return false;
 		}
-		console.log(38)
 		setOrder('inMix');
 	}
 

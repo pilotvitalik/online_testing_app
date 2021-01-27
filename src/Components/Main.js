@@ -13,12 +13,12 @@ function Main(props){
 	const tableContents = props.tableContents;
 	const [startInd, setStartInd] = useState(0);
 	const [quest, setQuest] = useState(props.nodeQuestions);
+
 	const changeQuest = (val) => {
 		setStartInd(val);
 	}
 
 	const defType = (type) => {
-		console.log(type);
 		if (type !== 'node'){
 			changeQuestType();
 			return false;
@@ -30,7 +30,7 @@ function Main(props){
 		setQuest(props.oopQuestions);
 	}
 
-	const changeType = (isMix, nameTest) => {
+	const changeType = (isMix, nameTest, questNumber) => {
 		defType(nameTest);
 		if (isMix === 'inOrder'){
 			quest.sort((a, b) => {
