@@ -7,7 +7,9 @@ ul{
 }
 
 .numQuest,
-.doneQuest{
+.doneQuest,
+.rightAnswer,
+.mistakeAnswer{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -23,6 +25,13 @@ ul{
 	background: grey;
 }
 
+
+.rightAnswer{
+	background: green;
+}
+.mistakeAnswer{
+	background: red;
+}
 .doneQuest{
 	background: grey;
 }

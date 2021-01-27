@@ -7,6 +7,14 @@ function Test(props){
 	let displayEl;
 	const quest = props.questions;
 
+	const defStatus = (status, ind) => {
+		console.log(ind);
+		console.log(status);
+		console.log(quest);
+		console.log(quest[ind]);
+		quest[ind].status_answer = status;
+	}
+
 	const listItems = quest.map((item, index) => 
 		index === props.startInd ?
 		<ListItem 
@@ -17,7 +25,8 @@ function Test(props){
 			answers={ item.answers }
 			rightAns={ item.rightAnswer }
 			idQuest={ item.id_quest }
-			changeItem={ props.changeItem }/>
+			changeItem={ props.changeItem }
+			statusAnswer={ defStatus }/>
 		: ''
 	);
 
@@ -27,7 +36,7 @@ function Test(props){
 
 	return (
 		<div className={ style.common }>
-			<ShowNumQuest quest={ quest } startInd={ props.startInd } startQuest={ props.startQuest }/>
+			<ShowNumQuest quest={ quest } startQuest={ props.startQuest }/>
 			{ displayEl }
 			<button
 				type='button'>

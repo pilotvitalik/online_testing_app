@@ -4,7 +4,7 @@ import style from './showNumQuest.module.css';
 class ShowNumQuest extends Component{
 
 	render(){
-		console.log(this.props.startInd);
+		console.log(this.props.quest);
 		const doneQuest = style.doneQuest;
 		const questions = this.props.quest;
 		const listQuest = questions.map((question, index) => 
@@ -13,7 +13,8 @@ class ShowNumQuest extends Component{
 				key={ question.id_quest } 
 				className={`
 					${ style.numQuest }
-					${ (index === this.props.startInd) ? doneQuest : '' }`}>
+					${ (index === this.props.startInd) ? doneQuest : '' }
+					${ (question.status_answer) ? style.rightAnswer : style.mistakeAnswer }`}>
 					{ question.id_quest }
 			</li>
 			: ''

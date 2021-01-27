@@ -7,6 +7,7 @@ function ListItem(props){
 	const answers = props.answers;
 
 	const [answerRight, isAnswerRight] = useState('');
+
 	const [num, setNum] = useState();
 
 	const checkAnswer = () => {
@@ -20,6 +21,7 @@ function ListItem(props){
 	const nextQuest = () => {
 		const nextInd = props.dataInd + 1;
 		props.changeItem(nextInd);
+		props.statusAnswer(answerRight, props.dataInd)
 	}
 
 	const checkVal = (event) => {
