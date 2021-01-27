@@ -8,10 +8,6 @@ function Test(props){
 	const quest = props.questions;
 
 	const defStatus = (status, ind) => {
-		console.log(ind);
-		console.log(status);
-		console.log(quest);
-		console.log(quest[ind]);
 		quest[ind].status_answer = status;
 	}
 

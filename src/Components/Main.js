@@ -32,7 +32,6 @@ function Main(props){
 	}
 
 	const changeType = (isMix, nameTest) => {
-		console.log('changeType');
 		setStartQuest(startInd);
 		defType(nameTest);
 		if (isMix === 'inOrder'){

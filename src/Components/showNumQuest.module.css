@@ -24,14 +24,15 @@ ul{
 	cursor: pointer;
 	background: grey;
 }
-
-
+.doneQuest{
+	background: grey;
+}
 .rightAnswer{
 	background: green;
 }
 .mistakeAnswer{
 	background: red;
 }
-.doneQuest{
-	background: grey;
+.white{
+	background: #fff;
 }
