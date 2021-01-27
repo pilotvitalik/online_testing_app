@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function SetParam(props) {
 	const [questNumber, setQuestNum] = useState('');
 	const [inOrder, setInOrder] = useState('0');
 	const [inMix, setInMix] = useState('');
+	const location = useLocation();
+	const url = `/test/${ location.state.test_page }`;
 
 	const changeNum = (event) => {
 		setQuestNum(+event.target.value);
@@ -21,7 +23,6 @@ function SetParam(props) {
 	const changeTypeMix = (event) => {
 		setInMix(+event.target.value);
 	}
-
 
 	return (
 		<React.Fragment>
@@ -67,11 +68,11 @@ function SetParam(props) {
 					</div>
 				</form>
 			</div>
-			<button
-				type='button'
-				onClick={ updateQuest }>
-				<Link to='/test'>К тестам</Link>
-			</button>
+				<Link 
+					to={ url }
+					onClick={ updateQuest }>
+						К тестам
+				</Link>
 		</React.Fragment>
 	);
 }

@@ -7,6 +7,7 @@ class SelectType extends Component{
 		super(props);
 		this.state = {
 			param: '/param/node',
+			testPage: 'node',
 		};
 	}
 
@@ -14,6 +15,7 @@ class SelectType extends Component{
 		this.setState(() => {
 			return {
 				param: `/param/${ urlPage }`,
+				testPage: urlPage,
 			};
 		});
 	}
@@ -27,7 +29,10 @@ class SelectType extends Component{
 		return (
 			<React.Fragment>
 				{ showTable }
-				<Link to={ this.state.param }>
+				<Link to={{
+					pathname: this.state.param,
+					state: {test_page: this.state.testPage},
+				}}>
 					Выбрать параметры
 				</Link>
 			</React.Fragment>
