@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SelectType from './SelectType.js';
 import Test from './Test.js';
 import SetParam from './SetParam.js';
@@ -6,6 +6,7 @@ import 	{
 	BrowserRouter as Router,
 	Switch,
 	Route,
+	useLocation
 } from 'react-router-dom';
 
 
@@ -46,11 +47,29 @@ function Main(props){
 		}
 	}
 
+	const changeGlobalMix = () => {
+		props.oopQuestions.push('mixArray');
+		let commonTests = props.nodeQuestions.concat(props.oopQuestions);
+		setQuest(commonTests);
+	}
+
+	useEffect(() => {
+		console.log(quest);
+		if (quest[quest.length - 1] === 'mixArray'){
+			quest.pop();
+			for (let i = quest.length - 1; i > 0; i--) {
+				let j = Math.floor(Math.random() * (i + 1));
+			    [quest[i], quest[j]] = [quest[j], quest[i]];
+			}
+			return false;
+		}
+	});
+
 	return (
 		<Router>
 			<Switch>
 				<Route exact path='/'>
-					<SelectType tableContents={ tableContents }/>
+					<SelectType tableContents={ tableContents } changeGlobalMix={ changeGlobalMix }/>
 				</Route>
 				<Route path='/param'>
 					<SetParam changeItem={ changeQuest } changeType={ changeType }/>

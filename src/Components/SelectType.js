@@ -31,6 +31,7 @@ class SelectType extends Component{
 					testPage: 'common',
 				}
 			});
+			this.props.changeGlobalMix();
 			return false;
 		}
 		this.setState(() => {
