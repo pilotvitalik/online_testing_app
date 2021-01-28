@@ -17,6 +17,7 @@ function ListContent(props){
 				id={ props.url + '-' + props.idKey }
 				name='typeTest'
 				value={ props.url }
+				disabled={ props.globalMix }
 				defaultChecked={ testType === 'node' }
 				onClick={ defineUrl }/>
 			<label 
