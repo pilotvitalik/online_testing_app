@@ -48,13 +48,12 @@ function Main(props){
 	}
 
 	const changeGlobalMix = () => {
-		props.oopQuestions.push('mixArray');
-		let commonTests = props.nodeQuestions.concat(props.oopQuestions);
+		let commonTests = props.nodeQuestions.concat(props.oopQuestions)
+		commonTests.push('mixArray');
 		setQuest(commonTests);
 	}
 
 	useEffect(() => {
-		console.log(quest);
 		if (quest[quest.length - 1] === 'mixArray'){
 			quest.pop();
 			for (let i = quest.length - 1; i > 0; i--) {
@@ -64,6 +63,8 @@ function Main(props){
 			return false;
 		}
 	});
+
+	console.log(quest);
 
 	return (
 		<Router>
