@@ -5,8 +5,7 @@ import SetParam from './SetParam.js';
 import 	{
 	BrowserRouter as Router,
 	Switch,
-	Route,
-	useLocation
+	Route
 } from 'react-router-dom';
 
 

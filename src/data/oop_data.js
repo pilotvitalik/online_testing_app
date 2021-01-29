@@ -1,6 +1,7 @@
 let oopQuest = [
 	{
 		id_quest: 'oop_1',
+		name_test: 'OOP JS',
 		name_quest: 'Причины создания ООП',
 		answers: [
 			{
@@ -24,6 +25,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_2',
+		name_test: 'OOP JS',
 		name_quest: 'Что необходимо сделать в первую очередь при исп. ООП на новом проекте',
 		answers: [
 			{
@@ -47,6 +49,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_3',
+		name_test: 'OOP JS',
 		name_quest: 'Что необходимо сделать после создания сущности',
 		answers: [
 			{
@@ -70,6 +73,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_4',
+		name_test: 'OOP JS',
 		name_quest: 'Основные принципы структурирования ООП',
 		answers: [
 			{
@@ -89,6 +93,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_5',
+		name_test: 'OOP JS',
 		name_quest: 'Что такое абстракции?',
 		answers: [
 			{
@@ -112,6 +117,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_6',
+		name_test: 'OOP JS',
 		name_quest: 'Примеры абстракции ООП',
 		answers: [
 			{
@@ -135,7 +141,8 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_7',
-		name_quest: 'ЧТо должно находится в основной модели, если есть несколько ролей пользователей?',
+		name_test: 'OOP JS',
+		name_quest: 'Что должно находится в основной модели, если есть несколько ролей пользователей?',
 		answers: [
 			{
 				id: 1,
@@ -158,6 +165,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_8',
+		name_test: 'OOP JS',
 		name_quest: 'Что такое наследование ООП?',
 		answers: [
 			{
@@ -181,6 +189,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_9',
+		name_test: 'OOP JS',
 		name_quest: 'Что такое инкапсуляция',
 		answers: [
 			{
@@ -204,6 +213,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_10',
+		name_test: 'OOP JS',
 		name_quest: 'Что такое полиморфизм?',
 		answers: [
 			{
@@ -229,6 +239,7 @@ let oopQuest = [
 
 	{
 		id_quest: 'oop_11',
+		name_test: 'OOP JS',
 		name_quest: 'Где находится указатель на объект прототипа',
 		answers: [
 			{
@@ -248,6 +259,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_12',
+		name_test: 'OOP JS',
 		name_quest: 'Как обозначается объект прототипа?',
 		answers: [
 			{
@@ -271,6 +283,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_13',
+		name_test: 'OOP JS',
 		name_quest: 'Какой тип програмирования является основой ООП в JS',
 		answers: [
 			{
@@ -294,6 +307,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_14',
+		name_test: 'OOP JS',
 		name_quest: 'Способы наследования в прототипном ООП',
 		answers: [
 			{
@@ -317,6 +331,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_15',
+		name_test: 'OOP JS',
 		name_quest: 'Что указывается в качестве прототипа, при выводе в консоли наследуемого объекта?',
 		answers: [
 			{
@@ -340,6 +355,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_16',
+		name_test: 'OOP JS',
 		name_quest: 'Синтаксис добавления метода в объект',
 		answers: [
 			{
@@ -363,6 +379,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_17',
+		name_test: 'OOP JS',
 		name_quest: 'Синтаксис вызова метода объекта',
 		answers: [
 			{
@@ -386,6 +403,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_18',
+		name_test: 'OOP JS',
 		name_quest: 'Что такое прототип?',
 		answers: [
 			{
@@ -409,6 +427,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_19',
+		name_test: 'OOP JS',
 		name_quest: 'Что будет выводится, если после создания объекта, содержимое переменной поменять на строку/число?',
 		answers: [
 			{
@@ -432,6 +451,7 @@ let oopQuest = [
 	},
 	{
 		id_quest: 'oop_20',
+		name_test: 'OOP JS',
 		name_quest: 'Что такое __proto__?',
 		answers: [
 			{

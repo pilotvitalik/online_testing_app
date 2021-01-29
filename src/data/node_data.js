@@ -1,6 +1,7 @@
 let nodeQuest = [
 	{
 		id_quest: 'node_1',
+		name_test: 'NodeJS',
 		name_quest: 'Дата основания сервера Apache?',
 		answers: [
 			{
@@ -24,6 +25,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_2',
+		name_test: 'NodeJS',
 		name_quest: 'Основная особенность сервера Apache',
 		answers: [
 			{
@@ -47,6 +49,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_3',
+		name_test: 'NodeJS',
 		name_quest: 'Дата основания сервера Nginx?',
 		answers: [
 			{
@@ -70,6 +73,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_4',
+		name_test: 'NodeJS',
 		name_quest: 'Основная особенность сервера Nginx',
 		answers: [
 			{
@@ -93,6 +97,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_5',
+		name_test: 'NodeJS',
 		name_quest: 'Основной плюс Nginx по сравнению с Apache',
 		answers: [
 			{
@@ -116,6 +121,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_6',
+		name_test: 'NodeJS',
 		name_quest: 'Дата основания сервера NodeJS?',
 		answers: [
 			{
@@ -139,6 +145,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_7',
+		name_test: 'NodeJS',
 		name_quest: 'Для чего был создан NodeJS',
 		answers: [
 			{
@@ -162,6 +169,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_8',
+		name_test: 'NodeJS',
 		name_quest: 'Особенности NodeJS',
 		answers: [
 			{
@@ -185,6 +193,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_9',
+		name_test: 'NodeJS',
 		name_quest: 'Что такое C++ binding?',
 		answers: [
 			{
@@ -208,6 +217,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_10',
+		name_test: 'NodeJS',
 		name_quest: 'Что необходимо указывать при написании кода на NodeJS и для чего',
 		answers: [
 			{
@@ -231,6 +241,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_11',
+		name_test: 'NodeJS',
 		name_quest: 'Особенности движка V8',
 		answers: [
 			{
@@ -254,6 +265,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_12',
+		name_test: 'NodeJS',
 		name_quest: 'Что находится в данном репозитории: github.com/nvm-sh/nvm',
 		answers: [
 			{
@@ -277,6 +289,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_13',
+		name_test: 'NodeJS',
 		name_quest: 'Порядок правильной установки NodeJS',
 		answers: [
 			{
@@ -300,6 +313,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_14',
+		name_test: 'NodeJS',
 		name_quest: 'Что такое REPL?',
 		answers: [
 			{
@@ -323,6 +337,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_15',
+		name_test: 'NodeJS',
 		name_quest: 'Цель написания JS в консоли',
 		answers: [
 			{
@@ -346,6 +361,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_16',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает данный знак в NodeJS: _ (и сделать пример (стр. 2))',
 		answers: [
 			{
@@ -369,6 +385,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_17',
+		name_test: 'NodeJS',
 		name_quest: 'Получить API опр. функции NodeJS в консоли',
 		answers: [
 			{
@@ -392,6 +409,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_18',
+		name_test: 'NodeJS',
 		name_quest: 'Основные команды REPL',
 		answers: [
 			{
@@ -415,6 +433,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_19',
+		name_test: 'NodeJS',
 		name_quest: 'создание и запуск простого скрипта (с примером)',
 		answers: [
 			{
@@ -438,6 +457,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_20',
+		name_test: 'NodeJS',
 		name_quest: 'Способы создания файла',
 		answers: [
 			{
@@ -461,6 +481,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_21',
+		name_test: 'NodeJS',
 		name_quest: 'Способ выход из скрипта, т.е. завершение программы',
 		answers: [
 			{
@@ -484,6 +505,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_22',
+		name_test: 'NodeJS',
 		name_quest: 'Какой модуль используется для хранения секретных данных для передачи по сети?',
 		answers: [
 			{
@@ -507,6 +529,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_23',
+		name_test: 'NodeJS',
 		name_quest: 'Действия для передачи секретных данных при использовании модуля cross-env',
 		answers: [
 			{
@@ -530,6 +553,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_24',
+		name_test: 'NodeJS',
 		name_quest: 'Добавление секретных данных в переменную окружения без исп. модуля cross-env на Linux',
 		answers: [
 			{
@@ -553,6 +577,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_25',
+		name_test: 'NodeJS',
 		name_quest: 'Способ добавления секретных данных в переменную окружения на Linux  с помощью терминала',
 		answers: [
 			{
@@ -576,6 +601,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_26',
+		name_test: 'NodeJS',
 		name_quest: 'Команда вызова аргументов командной строки на NodeJS (с примерами: терминал, файл js)',
 		answers: [
 			{
@@ -599,6 +625,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_27',
+		name_test: 'NodeJS',
 		name_quest: 'Какой путь выводится, если в качестве аргументов командной строки указывается файл',
 		answers: [
 			{
@@ -618,6 +645,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_28',
+		name_test: 'NodeJS',
 		name_quest: 'Встроенный модуль NodeJS для работы с путями',
 		answers: [
 			{
@@ -641,6 +669,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_29',
+		name_test: 'NodeJS',
 		name_quest: 'Пример встроенного модуля для работы с путями',
 		answers: [
 			{
@@ -664,6 +693,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_30',
+		name_test: 'NodeJS',
 		name_quest: 'Встроенный модуль для работы с файловой системой',
 		answers: [
 			{
@@ -687,6 +717,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_31',
+		name_test: 'NodeJS',
 		name_quest: 'Метод для непрервыного отслеживания изменений в файле',
 		answers: [
 			{
@@ -710,6 +741,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_32',
+		name_test: 'NodeJS',
 		name_quest: 'Какие параметры можно задать в fs.watchFile()',
 		answers: [
 			{
@@ -733,6 +765,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_33',
+		name_test: 'NodeJS',
 		name_quest: 'Встроенный модуль с потенциально полезными функциями для разработчика',
 		answers: [
 			{
@@ -756,6 +789,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_34',
+		name_test: 'NodeJS',
 		name_quest: 'Как используется модуль util на NodeJS',
 		answers: [
 			{
@@ -775,6 +809,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_35',
+		name_test: 'NodeJS',
 		name_quest: 'Встроенный модуль для получения сведений об ОС',
 		answers: [
 			{
@@ -798,6 +833,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_36',
+		name_test: 'NodeJS',
 		name_quest: 'Формат получения данных с помощью встроенных модулей NodeJS',
 		answers: [
 			{
@@ -817,6 +853,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_37',
+		name_test: 'NodeJS',
 		name_quest: 'Получить список системных констант с помощью модуля NodeJS',
 		answers: [
 			{
@@ -840,6 +877,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_38',
+		name_test: 'NodeJS',
 		name_quest: 'Получить инфорацию о каждом ядре с помощью модуля NodeJS',
 		answers: [
 			{
@@ -863,6 +901,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_39',
+		name_test: 'NodeJS',
 		name_quest: 'Получить hostname ОС с помощью модуля NodeJS',
 		answers: [
 			{
@@ -886,6 +925,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_40',
+		name_test: 'NodeJS',
 		name_quest: 'Получить тип ОС с помощью модуля NodeJS',
 		answers: [
 			{
@@ -909,6 +949,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_41',
+		name_test: 'NodeJS',
 		name_quest: 'Названия типов ОС, полученных с помощью модуля os.type()',
 		answers: [
 			{
@@ -932,6 +973,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_42',
+		name_test: 'NodeJS',
 		name_quest: 'Получить информацию о пользователе с помощью модуля NodeJS',
 		answers: [
 			{
@@ -951,6 +993,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_43',
+		name_test: 'NodeJS',
 		name_quest: 'Создать простейший сервер с помощью модуля NodeJS',
 		answers: [
 			{
@@ -974,6 +1017,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_44',
+		name_test: 'NodeJS',
 		name_quest: 'Что такое простейший сервер',
 		answers: [
 			{
@@ -989,6 +1033,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_45',
+		name_test: 'NodeJS',
 		name_quest: 'Пример создания простейшего сервера',
 		answers: [
 			{
@@ -1012,6 +1057,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_46',
+		name_test: 'NodeJS',
 		name_quest: 'Способы выполнения GET запроса',
 		answers: [
 			{
@@ -1035,6 +1081,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_47',
+		name_test: 'NodeJS',
 		name_quest: 'Пример GET запроса с помощью модуля http',
 		answers: [
 			{
@@ -1058,6 +1105,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_48',
+		name_test: 'NodeJS',
 		name_quest: 'Пример запроса с помощью модуля axios',
 		answers: [
 			{
@@ -1077,6 +1125,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_49',
+		name_test: 'NodeJS',
 		name_quest: 'Парсинг параметров GET запроса с помощью модуля NodeJS',
 		answers: [
 			{
@@ -1100,6 +1149,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_50',
+		name_test: 'NodeJS',
 		name_quest: 'Нужно ли передавать "?" внутри модуля querystring на NodeJS',
 		answers: [
 			{
@@ -1119,6 +1169,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_51',
+		name_test: 'NodeJS',
 		name_quest: 'Что такое Deno',
 		answers: [
 			{
@@ -1142,6 +1193,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_52',
+		name_test: 'NodeJS',
 		name_quest: 'определение Deno',
 		answers: [
 			{
@@ -1165,6 +1217,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_53',
+		name_test: 'NodeJS',
 		name_quest: 'Дата создания Deno',
 		answers: [
 			{
@@ -1188,6 +1241,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_54',
+		name_test: 'NodeJS',
 		name_quest: 'Что такое CommonJS?',
 		answers: [
 			{
@@ -1207,6 +1261,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_55',
+		name_test: 'NodeJS',
 		name_quest: 'В чем особенность CommonJS?',
 		answers: [
 			{
@@ -1230,6 +1285,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_56',
+		name_test: 'NodeJS',
 		name_quest: 'Чем является каждый скрипт (файл) для NodeJS?',
 		answers: [
 			{
@@ -1253,6 +1309,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_57',
+		name_test: 'NodeJS',
 		name_quest: 'Способы экспорта на NodeJS',
 		answers: [
 			{
@@ -1276,6 +1333,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_58',
+		name_test: 'NodeJS',
 		name_quest: 'Импорт на NodeJS',
 		answers: [
 			{
@@ -1299,6 +1357,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_59',
+		name_test: 'NodeJS',
 		name_quest: 'Краткий порядок работы функции require',
 		answers: [
 			{
@@ -1322,6 +1381,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_60',
+		name_test: 'NodeJS',
 		name_quest: 'Подробный порядок работы функции require',
 		answers: [
 			{
@@ -1345,6 +1405,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_61',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает Resolving',
 		answers: [
 			{
@@ -1368,6 +1429,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_62',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает Loading',
 		answers: [
 			{
@@ -1391,6 +1453,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_63',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает Wrapping',
 		answers: [
 			{
@@ -1414,6 +1477,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_64',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает Evaluation?',
 		answers: [
 			{
@@ -1437,6 +1501,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_65',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает caching?',
 		answers: [
 			{
@@ -1460,6 +1525,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_66',
+		name_test: 'NodeJS',
 		name_quest: 'Какими переменными являются __dirname и __filename и откуда они берутся?',
 		answers: [
 			{
@@ -1483,6 +1549,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_67',
+		name_test: 'NodeJS',
 		name_quest: 'Основные св-ва exports',
 		answers: [
 			{
@@ -1506,6 +1573,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_68',
+		name_test: 'NodeJS',
 		name_quest: 'Основные св-ва module.exports',
 		answers: [
 			{
@@ -1529,6 +1597,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_69',
+		name_test: 'NodeJS',
 		name_quest: 'Основные этапы Resolving',
 		answers: [
 			{
@@ -1552,6 +1621,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_70',
+		name_test: 'NodeJS',
 		name_quest: 'Что такое streams?',
 		answers: [
 			{
@@ -1575,6 +1645,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_71',
+		name_test: 'NodeJS',
 		name_quest: 'Основной плюс streams?',
 		answers: [
 			{
@@ -1598,6 +1669,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_72',
+		name_test: 'NodeJS',
 		name_quest: 'Виды стримов',
 		answers: [
 			{
@@ -1621,6 +1693,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_73',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает стрим Readable?',
 		answers: [
 			{
@@ -1644,6 +1717,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_74',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает стрим Writable?',
 		answers: [
 			{
@@ -1667,6 +1741,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_75',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает стрим Duplex?',
 		answers: [
 			{
@@ -1690,6 +1765,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_76',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает стрим Transform?',
 		answers: [
 			{
@@ -1713,6 +1789,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_77',
+		name_test: 'NodeJS',
 		name_quest: 'Благодаря чему созданы стримы?',
 		answers: [
 			{
@@ -1736,6 +1813,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_78',
+		name_test: 'NodeJS',
 		name_quest: 'Что означает EventEmitter?',
 		answers: [
 			{
@@ -1759,6 +1837,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_79',
+		name_test: 'NodeJS',
 		name_quest: 'С помощью какого модуля и метода можно получить метаданые файла?',
 		answers: [
 			{
@@ -1782,6 +1861,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_80',
+		name_test: 'NodeJS',
 		name_quest: 'Какой модуль работает с сжатием?',
 		answers: [
 			{
@@ -1805,6 +1885,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_81',
+		name_test: 'NodeJS',
 		name_quest: 'Синтаксис разбиения файла',
 		answers: [
 			{
@@ -1828,6 +1909,7 @@ let nodeQuest = [
 	},
 	{
 		id_quest: 'node_82',
+		name_test: 'NodeJS',
 		name_quest: 'Метод для передачи данных между стримами',
 		answers: [
 			{
