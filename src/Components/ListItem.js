@@ -7,6 +7,7 @@ function ListItem(props){
 	const answers = props.answers;
 
 	const [answerRight, isAnswerRight] = useState('');
+	const [answerText, setAnswerText ] = useState('');
 
 	const [num, setNum] = useState();
 
@@ -15,6 +16,11 @@ function ListItem(props){
 			isAnswerRight(true);
 			return false;
 		}
+		answers.forEach(item => {
+			if (item.id === props.rightAns){
+				setAnswerText(item.answer);
+			}
+		});
 		isAnswerRight(false);
 	}
 
@@ -29,12 +35,14 @@ function ListItem(props){
 		checkAnswer();
 	}
 
+	const rightAnswer = `Правильный ответ: ${ answerText }`;
+
 	switch(answerRight){
 		case true:
 			mes = <React.Fragment><p className={ style.trueAnswer }>Верно</p><button type='button' onClick={ nextQuest }>Следующий вопрос</button></React.Fragment>;
 			break;
 		case false:
-			mes = <React.Fragment><p>Не верно</p><button type='button' onClick={ nextQuest }>Следующий вопрос</button></React.Fragment>;
+			mes = <React.Fragment><p>Не верно</p><p>{ rightAnswer }</p><button type='button' onClick={ nextQuest }>Следующий вопрос</button></React.Fragment>;
 			break;
 		default:
 			mes = '';
