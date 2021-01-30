@@ -9,6 +9,7 @@ class SelectType extends Component{
 			param: '/param/node',
 			testPage: 'node',
 			isGlobalMix: false,
+			textBtn: 'Выбрать параметры',
 		};
 		this.selectMix = this.selectMix.bind(this);
 	}
@@ -29,6 +30,7 @@ class SelectType extends Component{
 					isGlobalMix: true,
 					param: '/test/common_test',
 					testPage: 'common',
+					textBtn: 'К тесту',
 				}
 			});
 			this.props.changeGlobalMix();
@@ -37,6 +39,7 @@ class SelectType extends Component{
 		this.setState(() => {
 			return {
 				isGlobalMix: false,
+				textBtn: 'Выбрать параметры',
 			}
 		});
 		
@@ -67,7 +70,7 @@ class SelectType extends Component{
 					pathname: this.state.param,
 					state: {test_page: this.state.testPage},
 				}}>
-					Выбрать параметры
+					{ this.state.textBtn }
 				</Link>
 			</React.Fragment>
 		);
