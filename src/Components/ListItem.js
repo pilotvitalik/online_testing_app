@@ -52,6 +52,7 @@ function ListItem(props){
 	);
 
 	return <div data-ind={ props.dataInd }>
+		<h2>{ props.titleQuest }</h2>
 		<h3>Вопрос № { props.idQuest.replace(/[a-zA-Z]+_/g, '') }. { props.question }</h3>
 		<form>
 			{ listAnswer }

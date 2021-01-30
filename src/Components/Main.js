@@ -58,12 +58,17 @@ function Main(props){
 			for (let i = quest.length - 1; i > 0; i--) {
 				let j = Math.floor(Math.random() * (i + 1));
 			    [quest[i], quest[j]] = [quest[j], quest[i]];
+			    for (let key in quest[j]){
+			    	if (key === 'name_test'){
+			    		quest[j]['vis_name_test'] = quest[j][key];
+			    		delete quest[j][key];
+			    	}
+			    }
 			}
+			quest.push('commonArray');
 			return false;
 		}
 	});
-
-	console.log(quest);
 
 	return (
 		<Router>

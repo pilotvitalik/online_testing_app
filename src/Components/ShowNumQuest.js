@@ -6,6 +6,13 @@ class ShowNumQuest extends Component{
 	render(){
 		const questions = this.props.quest;
 		console.log(questions);
+
+		if (questions.[questions.length - 1] === 'commonArray'){
+			questions.pop();
+		}
+
+		console.log(questions);
+
 		const listQuest = questions.map((question, index) => 
 			index >= this.props.startQuest ? 
 			<li 
