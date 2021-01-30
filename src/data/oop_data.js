@@ -264,7 +264,7 @@ let oopQuest = [
 		answers: [
 			{
 				id: 1,
-				answer: '__proto__',
+				answer: '_proto_',
 			},
 			{
 				id: 2,
@@ -472,6 +472,198 @@ let oopQuest = [
 			},
 		],
 		rightAnswer: 3,
+	},
+	{
+		id_quest: 'oop_21',
+		name_test: 'OOP JS',
+		name_quest: 'Что такое класс простым языком?',
+		answers: [
+			{
+				id: 1,
+				answer: 'функция или синтаксический сахар',
+			},
+			{
+				id: 2,
+				answer: 'объект и переменные',
+			},
+			{
+				id: 3,
+				answer: 'класс и набор объектов',
+			},
+			{
+				id: 4,
+				answer: 'переменная',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 'oop_22',
+		name_test: 'OOP JS',
+		name_quest: 'Процесс создания объекта в большинстве языках программирования',
+		answers: [
+			{
+				id: 1,
+				answer: 'класс -> объект',
+			},
+			{
+				id: 2,
+				answer: 'абстрактный класс -> класс -> объект',
+			},
+			{
+				id: 3,
+				answer: 'абстрактный класс -> класс',
+			},
+			{
+				id: 4,
+				answer: 'абстрактный класс -> класс -> переменная',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 'oop_23',
+		name_test: 'OOP JS',
+		name_quest: 'синтаксис создания класс',
+		answers: [
+			{
+				id: 1,
+				answer: 'var user = ...',
+			},
+			{
+				id: 2,
+				answer: 'obj User = {...}',
+			},
+			{
+				id: 3,
+				answer: 'class user = {...}',
+			},
+			{
+				id: 4,
+				answer: 'class User = {...}',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 'oop_24',
+		name_test: 'OOP JS',
+		name_quest: 'синтаксис добавления свойства в класс, у которого пока нет значения',
+		answers: [
+			{
+				id: 1,
+				answer: 'constructor(){\nthis.login = login;\n}',
+			},
+			{
+				id: 2,
+				answer: 'constructor(login){\nthis.login = login;\n}',
+			},
+			{
+				id: 3,
+				answer: 'constructor(login){\nsuper();\nthis.login = login;\n}',
+			},
+			{
+				id: 4,
+				answer: 'constructor(login){\nthis.login = '';\n}',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 'oop_25',
+		name_test: 'OOP JS',
+		name_quest: 'синтаксис создания нового объекта на основе класса',
+		answers: [
+			{
+				id: 1,
+				answer: 'const person = new User("user");',
+			},
+			{
+				id: 2,
+				answer: 'let person = new User("user");',
+			},
+			{
+				id: 3,
+				answer: 'const person = User("user");',
+			},
+			{
+				id: 4,
+				answer: 'const person = new User();',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 'oop_26',
+		name_test: 'OOP JS',
+		name_quest: 'Синтаксис добавления метода в класс',
+		answers: [
+			{
+				id: 1,
+				answer: 'function validate(){\nconsole.log("Hello world!");\n}',
+			},
+			{
+				id: 2,
+				answer: 'const validate = () => {\nconsole.log("Hello world!");\n}',
+			},
+			{
+				id: 3,
+				answer: 'validate(){\nconsole.log("Hello world!");\n}',
+			},
+			{
+				id: 4,
+				answer: 'let validate = () => {\nconsole.log("Hello world!");\n}',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 'oop_27',
+		name_test: 'OOP JS',
+		name_quest: 'В каком месте класс добавляется метод',
+		answers: [
+			{
+				id: 1,
+				answer: 'перед constructor',
+			},
+			{
+				id: 2,
+				answer: 'в любом месте',
+			},
+			{
+				id: 3,
+				answer: 'в середине',
+			},
+			{
+				id: 4,
+				answer: 'после constructor',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 'oop_28',
+		name_test: 'OOP JS',
+		name_quest: 'Синтаксис названия файлов только с классами',
+		answers: [
+			{
+				id: 1,
+				answer: 'с большой буквы',
+			},
+			{
+				id: 2,
+				answer: 'как обычно',
+			},
+			{
+				id: 3,
+				answer: 'через тире',
+			},
+			{
+				id: 4,
+				answer: 'с нижним подчеркиванием',
+			},
+		],
+		rightAnswer: 2,
 	},
 ];
 

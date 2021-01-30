@@ -22,6 +22,7 @@ function ListItem(props){
 	}
 
 	const checkAnswer = (event) => {
+		console.log(num)
 		if (num === props.rightAns){
 			isAnswerRight(true);
 			return false;
