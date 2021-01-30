@@ -18,7 +18,7 @@ function ItemAnswer(props){
 				value={ activeVal }
 				onClick={ checkVal }
 				onKeyDown={ props.checkAnsw }/>
-			<label>{ props.val }</label>
+			<label>{ props.idAnsw }. { props.val }</label>
 		</div>
 	);
 }
