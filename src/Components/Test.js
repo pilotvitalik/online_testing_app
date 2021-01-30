@@ -39,10 +39,7 @@ function Test(props){
 		<div className={ style.common }>
 			<ShowNumQuest quest={ quest } startQuest={ props.startQuest }/>
 			{ displayEl }
-			<button
-				type='button'>
-				<Link to='/'>Главная</Link>
-			</button>
+			<Link to='/'>Главная</Link>
 		</div>
 	);
 }
