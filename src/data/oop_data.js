@@ -564,7 +564,7 @@ let oopQuest = [
 			},
 			{
 				id: 4,
-				answer: 'constructor(login){\nthis.login = '';\n}',
+				answer: 'constructor(login){\nthis.login = "";\n}',
 			},
 		],
 		rightAnswer: 2,
@@ -963,7 +963,7 @@ let oopQuest = [
 				answer: 'для служебных операций внутри наследуемого класса',
 			},
 			{
-				id: 2
+				id: 2,
 				answer: 'для служебных операций внутри определенного метода внутри класса',
 			},
 			{

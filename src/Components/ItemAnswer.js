@@ -16,8 +16,7 @@ function ItemAnswer(props){
 				name={ nameAnsw }
 				type='radio'
 				value={ activeVal }
-				onClick={ checkVal }
-				onKeyDown={ props.checkAnsw }/>
+				onClick={ checkVal }/>
 			<label>{ props.idAnsw }. { props.val }</label>
 		</div>
 	);

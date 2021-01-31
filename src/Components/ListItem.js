@@ -8,21 +8,11 @@ function ListItem(props){
 
 	const [answerRight, isAnswerRight] = useState('');
 	const [answerText, setAnswerText ] = useState('');
+	const [keyboard, isKeyboard] = useState(false);
 
 	const [num, setNum] = useState();
 
-	const defineAnswer = (event) => {
-		if (49 <= event.keyCode <= 52){
-			setNum(+event.key);
-			checkAnswer();
-		}	
-		if (event.keyCode === 13){
-			nextQuest();
-		}
-	}
-
 	const checkAnswer = (event) => {
-		console.log(num)
 		if (num === props.rightAns){
 			isAnswerRight(true);
 			return false;
@@ -45,9 +35,22 @@ function ListItem(props){
 		setNum(+event.target.value);
 		checkAnswer();
 	}
-	
+
+	const defineAnswer = (event) => {
+		if (49 <= event.keyCode <= 52){
+			isKeyboard(true);
+			setNum(+event.key);
+		}	
+		if (event.keyCode === 13){
+			nextQuest();
+		}
+	}
+
 	useEffect(() => {
 		document.onkeydown = defineAnswer;
+		if (keyboard){
+			checkAnswer();
+		}
 	});
 
 	const rightAnswer = `Правильный ответ: ${ answerText }`;
