@@ -665,6 +665,598 @@ let oopQuest = [
 		],
 		rightAnswer: 2,
 	},
+	{
+		id_quest: 'oop_29',
+		name_test: 'OOP JS',
+		name_quest: 'Синтаксис наследования с помощью классов',
+		answers: [
+			{
+				id: 1,
+				answer: 'class Student from User{\nconstructor(login){\nthis.nickname = nickname;\n}\n}',
+			},
+			{
+				id: 2,
+				answer: 'class Student extends User{\nconstructor(login){\nthis.nickname = nickname;\n}\n}',
+			},
+			{
+				id: 3,
+				answer: 'class Student proto User{\nconstructor(){\nthis.nickname = nickname;\n}\n}',
+			},
+			{
+				id: 4,
+				answer: 'class Student extends User{\nconstructor(){\nthis.nickname = nickname;\n}\n}',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 'oop_30',
+		name_test: 'OOP JS',
+		name_quest: 'Основные особенности constructor',
+		answers: [
+			{
+				id: 1,
+				answer: 'используется для установки свойств объекта на основе класса; запускается в момент создания; при создании экземпляра присваиваются некоторые значения',
+			},
+			{
+				id: 2,
+				answer: 'используется для установки свойств объекта на основе класса',
+			},
+			{
+				id: 3,
+				answer: 'используется для установки свойств объекта; запускается всегда при вызове; при создании экземпляра присваиваются значения по умолчанию',
+			},
+			{
+				id: 4,
+				answer: 'нет правильных ответов',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 'oop_31',
+		name_test: 'OOP JS',
+		name_quest: 'Основные особенности метода',
+		answers: [
+			{
+				id: 1,
+				answer: 'функции, расположенные внутри объекта; в момент создания объекта, доступны внутри созданного класса',
+			},
+			{
+				id: 2,
+				answer: 'функции, расположенные внутри класса',
+			},
+			{
+				id: 3,
+				answer: 'переменные, расположенные внутри класса; в момент создания объекта, доступны внутри созданного объекта',
+			},
+			{
+				id: 4,
+				answer: 'функции, расположенные внутри класса; в момент создания объекта, доступны внутри созданного объекта',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 'oop_32',
+		name_test: 'OOP JS',
+		name_quest: 'Дополнительный способ обратиться к методу родительского класса из наследуемого',
+		answers: [
+			{
+				id: 1,
+				answer: 'super(validate)',
+			},
+			{
+				id: 2,
+				answer: 'super[validate()]',
+			},
+			{
+				id: 3,
+				answer: 'super.validate()',
+			},
+			{
+				id: 4,
+				answer: 'validate()',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 'oop_33',
+		name_test: 'OOP JS',
+		name_quest: 'Что такое защищенные свойства',
+		answers: [
+			{
+				id: 1,
+				answer: 'свойства, которые нельзя изменить напрямую',
+			},
+			{
+				id: 2,
+				answer: 'свойства, которые нельзя изменить напрямую по соглашению',
+			},
+			{
+				id: 3,
+				answer: 'свойства, которые нельзя изменить',
+			},
+			{
+				id: 4,
+				answer: 'свойства, которые нельзя изменить после создания экземпляра класса',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 'oop_34',
+		name_test: 'OOP JS',
+		name_quest: 'синтаксис защищенного свойства',
+		answers: [
+			{
+				id: 1,
+				answer: 'this._name = name;',
+			},
+			{
+				id: 2,
+				answer: 'this.#name = name;',
+			},
+			{
+				id: 3,
+				answer: 'this.name = name;',
+			},
+			{
+				id: 4,
+				answer: '_name = name;',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 'oop_35',
+		name_test: 'OOP JS',
+		name_quest: 'где лучше добавлять защищенные свойства',
+		answers: [
+			{
+				id: 1,
+				answer: 'методе',
+			},
+			{
+				id: 2,
+				answer: 'конструкторе',
+			},
+			{
+				id: 3,
+				answer: 'super',
+			},
+			{
+				id: 4,
+				answer: 'в любом месте при создании экземпляра объекта',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 'oop_36',
+		name_test: 'OOP JS',
+		name_quest: 'Синтаксис добавления защищенного свойства в класс',
+		answers: [
+			{
+				id: 1,
+				answer: 'set username(username){\nthis._name = name',
+			},
+			{
+				id: 2,
+				answer: 'get name(username){\nthis._name = name',
+			},
+			{
+				id: 3,
+				answer: 'set name(username){\nthis._name = name',
+			},
+			{
+				id: 4,
+				answer: 'set name(username){\nthis.name = name',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 'oop_37',
+		name_test: 'OOP JS',
+		name_quest: 'Что означает первое слово после "set" при установке защищенного свойства',
+		answers: [
+			{
+				id: 1,
+				answer: 'название метода',
+			},
+			{
+				id: 2,
+				answer: 'название свойства, через которое можно получить доступ к защищенному свойству',
+			},
+			{
+				id: 3,
+				answer: 'название свойства, на которое ссылатся защищеное свойство',
+			},
+			{
+				id: 4,
+				answer: 'название защищенного свойства',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 'oop_38',
+		name_test: 'OOP JS',
+		name_quest: 'Синтаксис получения защищенного свойства в классе',
+		answers: [
+			{
+				id: 1,
+				answer: 'receive name(){\nreturn name;\n}',
+			},
+			{
+				id: 2,
+				answer: 'get name(){\nreturn name;\n}',
+			},
+			{
+				id: 3,
+				answer: 'get name(){\nname;\n}',
+			},
+			{
+				id: 4,
+				answer: 'get func_name(){\nreturn name;\n}',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 'oop_39',
+		name_test: 'OOP JS',
+		name_quest: 'В каких случаях свойство должно быть защищенным',
+		answers: [
+			{
+				id: 1,
+				answer: 'если при изменении данного свойства может порушиться программа',
+			},
+			{
+				id: 2,
+				answer: 'всегда',
+			},
+			{
+				id: 3,
+				answer: 'по желанию',
+			},
+			{
+				id: 4,
+				answer: 'когда указано в ТЗ',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 'oop_40',
+		name_test: 'OOP JS',
+		name_quest: 'Что такое приватные методы и свойства?',
+		answers: [
+			{
+				id: 1,
+				answer: 'методы и свойства, доступные при вводе пароля',
+			},
+			{
+				id: 2,
+				answer: 'методы и свойства, доступные при исп. слова "private"',
+			},
+			{
+				id: 3,
+				answer: 'методы и свойства, доступные только внутри родительского класса',
+			},
+			{
+				id: 4,
+				answer: 'методы и свойства, доступные внури класса',
+			},
+		],
+		rightAnswer: 4,
+	},
+	{
+		id_quest: 'oop_41',
+		name_test: 'OOP JS',
+		name_quest: 'Для чего используются приватные методы и свойства?',
+		answers: [
+			{
+				id: 1,
+				answer: 'для служебных операций внутри наследуемого класса',
+			},
+			{
+				id: 2
+				answer: 'для служебных операций внутри определенного метода внутри класса',
+			},
+			{
+				id: 3,
+				answer: 'для служебных операций внутри класса',
+			},
+			{
+				id: 4,
+				answer: 'для операций внутри наследуемого класса',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 'oop_42',
+		name_test: 'OOP JS',
+		name_quest: 'синтаксис приватного свойства',
+		answers: [
+			{
+				id: 1,
+				answer: '#name = "Vitaliy"',
+			},
+			{
+				id: 2,
+				answer: '?name = "Vitaliy"',
+			},
+			{
+				id: 3,
+				answer: '_name = "Vitaliy"',
+			},
+			{
+				id: 4,
+				answer: 'name = "Vitaliy"',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 'oop_43',
+		name_test: 'OOP JS',
+		name_quest: 'Что такое статические методы и свойства',
+		answers: [
+			{
+				id: 1,
+				answer: 'методы и свойства, прописанные в классе, которые можно вызвать без создания экземпляра класса',
+			},
+			{
+				id: 2,
+				answer: 'методы и свойства, прописанные в классе, которые нельзя изменять',
+			},
+			{
+				id: 3,
+				answer: 'методы и свойства, прописанные в классе, которые можно вызвать с помощью создания экземпляра класса',
+			},
+			{
+				id: 4,
+				answer: 'методы и свойства, прописанные в классе, которые можно вызвать через специальный метод',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 'oop_44',
+		name_test: 'OOP JS',
+		name_quest: 'Синтаксис статического метода',
+		answers: [
+			{
+				id: 1,
+				answer: 'getRole(){...}',
+			},
+			{
+				id: 2,
+				answer: '#getRole(){...}',
+			},
+			{
+				id: 3,
+				answer: 'static getRole(){...}',
+			},
+			{
+				id: 4,
+				answer: '_getRole(){...}',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 'oop_45',
+		name_test: 'OOP JS',
+		name_quest: 'что такое метод call()',
+		answers: [
+			{
+				id: 1,
+				answer: 'вызов функции с указанием определенного контекста для this внутри функции',
+			},
+			{
+				id: 2,
+				answer: 'вызов функции с указанием определенного контекста',
+			},
+			{
+				id: 3,
+				answer: 'подписка на события',
+			},
+			{
+				id: 4,
+				answer: 'вызов функции внутри другой функции',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 'oop_46',
+		name_test: 'OOP JS',
+		name_quest: 'синтаксис метода call()',
+		answers: [
+			{
+				id: 1,
+				answer: 'fucntion_name.call(context, arg1, arg2, arg3);',
+			},
+			{
+				id: 2,
+				answer: 'fucntion_name.call(context);',
+			},
+			{
+				id: 3,
+				answer: 'fucntion.call(context, arg1, arg2, arg3);',
+			},
+			{
+				id: 4,
+				answer: 'fucntion_name.call(this = context);',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 'oop_47',
+		name_test: 'OOP JS',
+		name_quest: 'что означается context в методе call()',
+		answers: [
+			{
+				id: 1,
+				answer: 'элемент страницы, на котором вызывается функция',
+			},
+			{
+				id: 2,
+				answer: 'глобальный контекст',
+			},
+			{
+				id: 3,
+				answer: 'класс',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 'oop_48',
+		name_test: 'OOP JS',
+		name_quest: 'что означается arg1, arg2, arg3... в методе call()',
+		answers: [
+			{
+				id: 1,
+				answer: 'аргументы, передаваемые в метод call при вызове функции; обяхательный парметр',
+			},
+			{
+				id: 2,
+				answer: 'аргументы, передаваемые в метод call при вызове функции; необязательный парметр',
+			},
+			{
+				id: 3,
+				answer: 'аргументы, передаваемые в метод call при вызове функции;',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 'oop_49',
+		name_test: 'OOP JS',
+		name_quest: 'Порядок вызова метода call()',
+		answers: [
+			{
+				id: 1,
+				answer: 'в JS определить элемент на странице, на котором будет вызвана функция',
+			},
+			{
+				id: 2,
+				answer: 'создать функцию',
+			},
+			{
+				id: 3,
+				answer: 'вызвать созданную функцию с исп. метода call()',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 'oop_50',
+		name_test: 'OOP JS',
+		name_quest: 'Что такое метод apply()',
+		answers: [
+			{
+				id: 1,
+				answer: 'метода, аналогичный call(), позволяющий передавать аргументы не списком, а массивом',
+			},
+			{
+				id: 2,
+				answer: 'метода, позволяющий передавать аргументы не списком, а массивом',
+			},
+			{
+				id: 3,
+				answer: 'метода, аналогичный call(); синтаксический сахар',
+			},
+		],
+		rightAnswer: 1,
+	},
+	{
+		id_quest: 'oop_51',
+		name_test: 'OOP JS',
+		name_quest: 'Синтаксис метода apply()',
+		answers: [
+			{
+				id: 1,
+				answer: 'function_name.apply([arg1, arg2, arg3, ...]);',
+			},
+			{
+				id: 2,
+				answer: 'function_name.apply(context, [arg1, arg2, arg3, ...]);',
+			},
+			{
+				id: 3,
+				answer: 'apply(function_name, [arg1, arg2, arg3, ...]);',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 'oop_52',
+		name_test: 'OOP JS',
+		name_quest: 'Что такое метод bind()',
+		answers: [
+			{
+				id: 1,
+				answer: 'привязывает контекст функции',
+			},
+			{
+				id: 2,
+				answer: 'привязывает контекст функции и получает новый экземпляр',
+			},
+			{
+				id: 3,
+				answer: 'нет правильного ответа',
+			},
+		],
+		rightAnswer: 2,
+	},
+	{
+		id_quest: 'oop_53',
+		name_test: 'OOP JS',
+		name_quest: 'Синтаксис метода bind()',
+		answers: [
+			{
+				id: 1,
+				answer: 'let a = bind(b1, arg1, ...);\nb1.onclick = a;',
+			},
+			{
+				id: 2,
+				answer: 'let a.onclick = function_name.bind(b1, arg1, ...);',
+			},
+			{
+				id: 3,
+				answer: 'let a = function_name.bind(b1, arg1, ...);\nb1.onclick = a;',
+			},
+		],
+		rightAnswer: 3,
+	},
+	{
+		id_quest: 'oop_54',
+		name_test: 'OOP JS',
+		name_quest: 'Отличие метода bind() от call() и apply()',
+		answers: [
+			{
+				id: 1,
+				answer: 'можно использовать сколько угодно раз',
+			},
+			{
+				id: 2,
+				answer: 'используется только 1 раз',
+			},
+			{
+				id: 3,
+				answer: 'отличий нет',
+			},
+		],
+		rightAnswer: 1,
+	},
 ];
 
 export { oopQuest };
