@@ -24,6 +24,6 @@ yarn-error.log*
 
 .eslintcache
 
-./data/node_data.js
-./data/oop_data.js
-./data/tableContents.js
+# ./data/node_data.js
+# ./data/oop_data.js
+# ./data/tableContents.js
