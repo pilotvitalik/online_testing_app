@@ -1,5 +1,5 @@
 import ItemAnswer from './ItemAnswer.js';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import style from './listItem.module.css';
 
 function ListItem(props){
@@ -12,7 +12,7 @@ function ListItem(props){
 
 	const [num, setNum] = useState();
 
-	const checkAnswer = (event) => {
+	const checkAnswer = useCallback((event) => {
 		if (num === props.rightAns){
 			isAnswerRight(true);
 			return false;
@@ -23,7 +23,7 @@ function ListItem(props){
 			}
 		});
 		isAnswerRight(false);
-	}
+	}, [answers, num, props.rightAns])
 
 	const nextQuest = () => {
 		const nextInd = props.dataInd + 1;
@@ -47,11 +47,14 @@ function ListItem(props){
 	}
 
 	useEffect(() => {
-		document.onkeydown = defineAnswer;
-		if (keyboard){
+		if (!keyboard) document.onkeydown = defineAnswer;
+	});
+
+	useEffect(() => {
+		if (!isNaN(num) && 1 <= num <= 4 && num !== 0){
 			checkAnswer();
 		}
-	});
+	}, [num, checkAnswer])
 
 	const rightAnswer = `Правильный ответ: ${ answerText }`;
 
