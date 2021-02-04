@@ -1,47 +1,73 @@
+
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ListItem from './ListItem.js';
 import ShowNumQuest from './ShowNumQuest.js';
 import style from './test.module.css';
 
-function Test(props){
-	let displayEl;
-	const quest = props.questions;
-
-	if (quest.[quest.length - 1] === 'commonArray'){
-		quest.pop();
+class Test extends Component{
+	constructor(props){
+		super(props);
+		this.state = {
+			quest: this.props.questions,
+		}
+		this.defStatus = this.defStatus.bind(this);
 	}
 
-	const defStatus = (status, ind) => {
-		quest[ind].status_answer = status;
+	
+
+	componentDidMount(){
+		if (this.state.quest.[this.state.quest.length - 1] === 'commonArray'){
+			this.state.quest.pop();
+		}
 	}
 
-	const listItems = quest.map((item, index) => 
-		index === props.startInd ?
-		<ListItem 
-			dataInd={ index }
-			question={item.name_quest}
-			key={ item.id_quest }
-			title={ item.name_quest }
-			answers={ item.answers }
-			rightAns={ item.rightAnswer }
-			idQuest={ item.id_quest }
-			changeItem={ props.changeItem }
-			statusAnswer={ defStatus }
-			titleQuest={ item.vis_name_test }/>
-		: ''
-	);
+	defStatus(status, ind){
+		const arrQuest = this.state.quest;
+		const tempArr = arrQuest.map((item, index) => {
+			if (index === ind) {
+				item.status_answer = status;
+				return item;
+			}
+			return item;
+		});
+		this.setState({
+			quest: tempArr,
+		});
+	}
 
-	const testDone = <h2>Тест пройден</h2>;
+	render(){
+		let displayEl;
+		const testDone = <h2>Тест пройден</h2>;
 
-	props.startInd !== quest.length ? displayEl = listItems : displayEl = testDone;
+		const arrQuest = this.state.quest;
 
-	return (
-		<div className={ style.common }>
-			<ShowNumQuest quest={ quest } startQuest={ props.startQuest }/>
-			{ displayEl }
-			<Link to='/'>Главная</Link>
-		</div>
-	);
+		const listItems = arrQuest.map((item, index) => 
+			index === this.props.startInd ?
+			<ListItem 
+				dataInd={ index }
+				question={item.name_quest}
+				key={ item.id_quest }
+				title={ item.name_quest }
+				answers={ item.answers }
+				rightAns={ item.rightAnswer }
+				idQuest={ item.id_quest }
+				changeItem={ this.props.changeItem }
+				statusAnswer={ this.defStatus }
+				titleQuest={ item.vis_name_test }/>
+			: ''
+		);
+
+		this.props.startInd !== this.state.quest.length ? displayEl = listItems : displayEl = testDone;
+
+		return(
+			<div className={ style.common }>
+				<ShowNumQuest quest={ this.state.quest } startQuest={ this.props.startQuest }/>
+				{ displayEl }
+				<Link to='/'>Главная</Link>
+			</div>
+		);
+	}
 }
 
 export default Test;

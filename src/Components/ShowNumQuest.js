@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import style from './showNumQuest.module.css';
 
 class ShowNumQuest extends Component{
-
 	render(){
 		const questions = this.props.quest;
 
