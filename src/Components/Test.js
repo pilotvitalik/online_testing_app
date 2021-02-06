@@ -14,8 +14,6 @@ class Test extends Component{
 		this.defStatus = this.defStatus.bind(this);
 	}
 
-	
-
 	componentDidMount(){
 		if (this.state.quest.[this.state.quest.length - 1] === 'commonArray'){
 			this.state.quest.pop();

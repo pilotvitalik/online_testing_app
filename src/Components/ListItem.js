@@ -8,7 +8,7 @@ class ListItem extends Component{
 		this.state = {
 			answerRight: '',
 			answerText: '',
-			num: ''
+			num: '',
 		};
 		this.checkVal = this.checkVal.bind(this);
 		this.nextQuest = this.nextQuest.bind(this);
@@ -52,7 +52,8 @@ class ListItem extends Component{
 	defineAnswer(event){
 		if (49 <= event.keyCode && event.keyCode <= 52){
 			this.setState({
-				num: +event.key
+				num: +event.key,
+
 			});
 			this.checkAnswer();
 		}	
@@ -99,9 +100,9 @@ class ListItem extends Component{
 				idQuest={ this.props.idQuest }
 				idAnsw={ answer.id }
 				func={ this.setNum }
-				checkAnsw={ this.checkVal }/>
+				checkAnsw={ this.checkVal }
+				keyAnswer={ this.state.num }/>
 		);
-
 		return(
 			<div data-ind={ this.props.dataInd }>
 				<h2>{ this.props.titleQuest }</h2>
