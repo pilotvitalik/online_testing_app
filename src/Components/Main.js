@@ -16,6 +16,8 @@ function Main(props){
 	const [startQuest, setStartQuest] = useState(0);
 
 	const changeQuest = (val) => {
+		console.log('19 from chageQuest');
+		console.log(`val = ${val}`);
 		setStartInd(val);
 	}
 
@@ -31,8 +33,12 @@ function Main(props){
 		setQuest(props.oopQuestions);
 	}
 
-	const changeType = (isMix, nameTest) => {
-		setStartQuest(startInd);
+	const changeType = (isMix, nameTest, questNum) => {
+		console.log('35 from Main.js');
+		console.log(`isMix = ${isMix}`);
+		console.log(`nameTest = ${nameTest}`);
+		console.log(startInd);
+		setStartQuest(questNum);
 		defType(nameTest);
 		if (isMix === 'inOrder'){
 			quest.sort((a, b) => {

@@ -3,6 +3,8 @@ import style from './showNumQuest.module.css';
 
 class ShowNumQuest extends Component{
 	render(){
+		console.log(this.props.quest);
+		console.log(this.props.startQuest);
 		const questions = this.props.quest;
 
 		if (questions.[questions.length - 1] === 'commonArray'){
