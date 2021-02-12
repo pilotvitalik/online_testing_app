@@ -12,12 +12,14 @@ function SetParam(props) {
 	}
 
 	const updateQuest = () => {
-		console.log('15 from SetParam.js');
-		console.log(questNumber);
-		console.log(`order = ${order}`);
-		console.log(`location = ${location.state.test_page}`);
-		console.log(`questNumber = ${questNumber}`);
-		(questNumber !== '') ? props.changeItem(questNumber - 1) : props.changeItem(0); setQuestNum(0); props.changeType(order, location.state.test_page, questNumber);
+		if (questNumber !== '') { 
+			console.log('верно');
+			props.changeItem(questNumber - 1) 
+		} else {
+			props.changeItem(0);
+			setQuestNum(0);
+			props.changeType(order, location.state.test_page, questNumber);
+		}
 	}
 
 	const resetVal = () => {

@@ -35,6 +35,8 @@ class Test extends Component{
 	}
 
 	render(){
+		console.log(this.props.startQuest);
+		console.log(this.props.startInd);
 		let displayEl;
 		const testDone = <h2>Тест пройден</h2>;
 
@@ -60,7 +62,7 @@ class Test extends Component{
 
 		return(
 			<div className={ style.common }>
-				<ShowNumQuest quest={ this.state.quest } startQuest={ this.props.startQuest }/>
+				<ShowNumQuest quest={ this.state.quest } startQuest={ this.props.startInd }/>
 				{ displayEl }
 				<Link to='/'>Главная</Link>
 			</div>

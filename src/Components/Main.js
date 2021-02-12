@@ -37,6 +37,7 @@ function Main(props){
 		console.log('35 from Main.js');
 		console.log(`isMix = ${isMix}`);
 		console.log(`nameTest = ${nameTest}`);
+		console.log(`questNum = ${ questNum }`);
 		console.log(startInd);
 		setStartQuest(questNum);
 		defType(nameTest);
