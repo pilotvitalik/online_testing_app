@@ -13,7 +13,6 @@ function SetParam(props) {
 
 	const updateQuest = () => {
 		if (questNumber !== '') { 
-			console.log('верно');
 			props.changeItem(questNumber - 1) 
 		} else {
 			props.changeItem(0);

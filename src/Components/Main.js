@@ -16,31 +16,19 @@ function Main(props){
 	const [startQuest, setStartQuest] = useState(0);
 
 	const changeQuest = (val) => {
-		console.log('19 from chageQuest');
-		console.log(`val = ${val}`);
 		setStartInd(val);
 	}
 
-	const defType = (type) => {
-		if (type !== 'node'){
-			changeQuestType();
-			return false;
-		}
-		setQuest(props.nodeQuestions);
-	}
-
-	const changeQuestType = () => {
-		setQuest(props.oopQuestions);
+	const resetTest = (quest) => {
+		quest.forEach(item => {
+			if (item.hasOwnProperty('status_answer')) delete item['status_answer'];
+		})
+		setQuest(quest);
 	}
 
 	const changeType = (isMix, nameTest, questNum) => {
-		console.log('35 from Main.js');
-		console.log(`isMix = ${isMix}`);
-		console.log(`nameTest = ${nameTest}`);
-		console.log(`questNum = ${ questNum }`);
-		console.log(startInd);
 		setStartQuest(questNum);
-		defType(nameTest);
+		resetTest(props[nameTest + 'Questions']);
 		if (isMix === 'inOrder'){
 			quest.sort((a, b) => {
 				return a.id_quest - b.id_quest;

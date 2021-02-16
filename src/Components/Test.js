@@ -35,13 +35,9 @@ class Test extends Component{
 	}
 
 	render(){
-		console.log(this.props.startQuest);
-		console.log(this.props.startInd);
 		let displayEl;
 		const testDone = <h2>Тест пройден</h2>;
-
 		const arrQuest = this.state.quest;
-
 		const listItems = arrQuest.map((item, index) => 
 			index === this.props.startInd ?
 			<ListItem 
@@ -59,7 +55,6 @@ class Test extends Component{
 		);
 
 		this.props.startInd !== this.state.quest.length ? displayEl = listItems : displayEl = testDone;
-
 		return(
 			<div className={ style.common }>
 				<ShowNumQuest quest={ this.state.quest } startQuest={ this.props.startInd }/>
