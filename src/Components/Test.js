@@ -55,9 +55,10 @@ class Test extends Component{
 		);
 
 		this.props.startInd !== this.state.quest.length ? displayEl = listItems : displayEl = testDone;
+
 		return(
 			<div className={ style.common }>
-				<ShowNumQuest quest={ this.state.quest } startQuest={ this.props.startInd }/>
+				<ShowNumQuest quest={ this.state.quest } startQuest={ this.props.startQuest }/>
 				{ displayEl }
 				<Link to='/'>Главная</Link>
 			</div>

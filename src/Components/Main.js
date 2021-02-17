@@ -19,6 +19,10 @@ function Main(props){
 		setStartInd(val);
 	}
 
+	const initQuest = (val) => {
+		setStartQuest(val - 1);
+	}
+
 	const resetTest = (quest) => {
 		quest.forEach(item => {
 			if (item.hasOwnProperty('status_answer')) delete item['status_answer'];
@@ -27,7 +31,6 @@ function Main(props){
 	}
 
 	const changeType = (isMix, nameTest, questNum) => {
-		setStartQuest(questNum);
 		resetTest(props[nameTest + 'Questions']);
 		if (isMix === 'inOrder'){
 			quest.sort((a, b) => {
@@ -72,7 +75,7 @@ function Main(props){
 					<SelectType tableContents={ tableContents } changeGlobalMix={ changeGlobalMix }/>
 				</Route>
 				<Route path='/param'>
-					<SetParam changeItem={ changeQuest } changeType={ changeType }/>
+					<SetParam changeItem={ changeQuest } changeType={ changeType } initQuest={initQuest}/>
 				</Route>
 				<Route path='/test'>
 					<Test questions={ quest } changeItem={ changeQuest } startInd={ startInd } startQuest={ startQuest }/>
