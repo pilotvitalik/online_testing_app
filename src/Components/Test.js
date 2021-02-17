@@ -37,9 +37,7 @@ class Test extends Component{
 	render(){
 		let displayEl;
 		const testDone = <h2>Тест пройден</h2>;
-
 		const arrQuest = this.state.quest;
-
 		const listItems = arrQuest.map((item, index) => 
 			index === this.props.startInd ?
 			<ListItem 

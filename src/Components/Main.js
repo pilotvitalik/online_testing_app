@@ -19,21 +19,19 @@ function Main(props){
 		setStartInd(val);
 	}
 
-	const defType = (type) => {
-		if (type !== 'node'){
-			changeQuestType();
-			return false;
-		}
-		setQuest(props.nodeQuestions);
+	const initQuest = (val) => {
+		setStartQuest(val - 1);
 	}
 
-	const changeQuestType = () => {
-		setQuest(props.oopQuestions);
+	const resetTest = (quest) => {
+		quest.forEach(item => {
+			if (item.hasOwnProperty('status_answer')) delete item['status_answer'];
+		})
+		setQuest(quest);
 	}
 
-	const changeType = (isMix, nameTest) => {
-		setStartQuest(startInd);
-		defType(nameTest);
+	const changeType = (isMix, nameTest, questNum) => {
+		resetTest(props[nameTest + 'Questions']);
 		if (isMix === 'inOrder'){
 			quest.sort((a, b) => {
 				return a.id_quest - b.id_quest;
@@ -77,7 +75,7 @@ function Main(props){
 					<SelectType tableContents={ tableContents } changeGlobalMix={ changeGlobalMix }/>
 				</Route>
 				<Route path='/param'>
-					<SetParam changeItem={ changeQuest } changeType={ changeType }/>
+					<SetParam changeItem={ changeQuest } changeType={ changeType } initQuest={initQuest}/>
 				</Route>
 				<Route path='/test'>
 					<Test questions={ quest } changeItem={ changeQuest } startInd={ startInd } startQuest={ startQuest }/>
