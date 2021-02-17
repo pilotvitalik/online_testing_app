@@ -69,19 +69,21 @@ function Main(props){
 	});
 
 	return (
+		<ProvideAuth>
 		<Router>
 			<Switch>
 				<Route exact path='/'>
 					<SelectType tableContents={ tableContents } changeGlobalMix={ changeGlobalMix }/>
 				</Route>
-				<Route path='/param'>
+				<PrivateRoute path='/param'>
 					<SetParam changeItem={ changeQuest } changeType={ changeType } initQuest={initQuest}/>
-				</Route>
-				<Route path='/test'>
+				</PrivateRoute>
+				<PrivateRoute path='/test'>
 					<Test questions={ quest } changeItem={ changeQuest } startInd={ startInd } startQuest={ startQuest }/>
-				</Route>
+				</PrivateRoute>
 			</Switch>
 		</Router>
+		</ProvideAuth>
 	);
 }
 
