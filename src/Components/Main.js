@@ -5,7 +5,8 @@ import SetParam from './SetParam.js';
 import 	{
 	BrowserRouter as Router,
 	Switch,
-	Route
+	Route,
+	Redirect
 } from 'react-router-dom';
 
 
@@ -14,6 +15,19 @@ function Main(props){
 	const [startInd, setStartInd] = useState(0);
 	const [quest, setQuest] = useState(props.nodeQuestions);
 	const [startQuest, setStartQuest] = useState(0);
+
+	const PrivateRoute = ({component: Component, authenticated, ...rest}) => {
+		console.log(authenticated);
+		//console.log(...rest);
+	  return (
+	    <Route
+	      {...rest}
+	      render={(props) => authenticated === true
+	        ? <Component {...props} questions={ quest } changeItem={ changeQuest } startInd={ startInd } startQuest={ startQuest }/>
+	        : <Redirect to={{pathname: '/', state: {from: props.location}}} />}
+	    />
+	  )
+	}
 
 	const changeQuest = (val) => {
 		setStartInd(val);
@@ -69,21 +83,20 @@ function Main(props){
 	});
 
 	return (
-		<ProvideAuth>
 		<Router>
 			<Switch>
 				<Route exact path='/'>
 					<SelectType tableContents={ tableContents } changeGlobalMix={ changeGlobalMix }/>
 				</Route>
-				<PrivateRoute path='/param'>
+				<Route path='/param'>
 					<SetParam changeItem={ changeQuest } changeType={ changeType } initQuest={initQuest}/>
-				</PrivateRoute>
-				<PrivateRoute path='/test'>
+				</Route>
+				{/*<Route path='/test'>
 					<Test questions={ quest } changeItem={ changeQuest } startInd={ startInd } startQuest={ startQuest }/>
-				</PrivateRoute>
+				</Route>*/}
+				<PrivateRoute authenticated={false} path='/test' component={Test}/>
 			</Switch>
 		</Router>
-		</ProvideAuth>
 	);
 }
 
