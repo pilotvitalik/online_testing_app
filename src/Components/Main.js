@@ -16,14 +16,25 @@ function Main(props){
 	const [quest, setQuest] = useState(props.nodeQuestions);
 	const [startQuest, setStartQuest] = useState(0);
 
-	const PrivateRoute = ({component: Component, authenticated, ...rest}) => {
+	const PrivateRouteTest = ({component: Component, authenticated, ...rest}) => {
 		console.log(authenticated);
-		//console.log(...rest);
 	  return (
 	    <Route
 	      {...rest}
 	      render={(props) => authenticated === true
 	        ? <Component {...props} questions={ quest } changeItem={ changeQuest } startInd={ startInd } startQuest={ startQuest }/>
+	        : <Redirect to={{pathname: '/', state: {from: props.location}}} />}
+	    />
+	  )
+	}
+
+	const PrivateRouteParam = ({component: Component, authenticated, ...rest}) => {
+		console.log(authenticated);
+	  return (
+	    <Route
+	      {...rest}
+	      render={(props) => authenticated === true
+	        ? <Component {...props} changeItem={ changeQuest } changeType={ changeType } initQuest={initQuest}/>
 	        : <Redirect to={{pathname: '/', state: {from: props.location}}} />}
 	    />
 	  )
@@ -88,13 +99,8 @@ function Main(props){
 				<Route exact path='/'>
 					<SelectType tableContents={ tableContents } changeGlobalMix={ changeGlobalMix }/>
 				</Route>
-				<Route path='/param'>
-					<SetParam changeItem={ changeQuest } changeType={ changeType } initQuest={initQuest}/>
-				</Route>
-				{/*<Route path='/test'>
-					<Test questions={ quest } changeItem={ changeQuest } startInd={ startInd } startQuest={ startQuest }/>
-				</Route>*/}
-				<PrivateRoute authenticated={false} path='/test' component={Test}/>
+				<PrivateRouteParam authenticated={false} path='/param' component={SetParam}/>
+				<PrivateRouteTest authenticated={false} path='/test' component={Test}/>
 			</Switch>
 		</Router>
 	);
