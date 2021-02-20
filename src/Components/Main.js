@@ -15,6 +15,7 @@ function Main(props){
 	const [startInd, setStartInd] = useState(0);
 	const [quest, setQuest] = useState(props.nodeQuestions);
 	const [startQuest, setStartQuest] = useState(0);
+	const [auth, setAuth] = useState(false);
 
 	const PrivateRouteTest = ({component: Component, authenticated, ...rest}) => {
 		console.log(authenticated);
@@ -75,6 +76,10 @@ function Main(props){
 		setQuest(commonTests);
 	}
 
+	const useAuth = () => {
+		setAuth(true);
+	}
+
 	useEffect(() => {
 		if (quest[quest.length - 1] === 'mixArray'){
 			quest.pop();
@@ -97,10 +102,10 @@ function Main(props){
 		<Router>
 			<Switch>
 				<Route exact path='/'>
-					<SelectType tableContents={ tableContents } changeGlobalMix={ changeGlobalMix }/>
+					<SelectType tableContents={ tableContents } changeGlobalMix={ changeGlobalMix } isAuth={useAuth}/>
 				</Route>
-				<PrivateRouteParam authenticated={false} path='/param' component={SetParam}/>
-				<PrivateRouteTest authenticated={false} path='/test' component={Test}/>
+				<PrivateRouteParam authenticated={auth} path='/param' component={SetParam}/>
+				<PrivateRouteTest authenticated={auth} path='/test' component={Test}/>
 			</Switch>
 		</Router>
 	);
