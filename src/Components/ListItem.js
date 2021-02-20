@@ -69,15 +69,19 @@ class ListItem extends Component{
 	}
 
 	componentDidMount(){
+		console.log('componentDidMount')
 		document.addEventListener('keypress', this.defineAnswer);
 	}
 
 	componentWillUnmount(){
+		console.log('componentWillUnmount');
 		document.removeEventListener('keypress', this.defineAnswer);
 	}
 
 	render(){
+		console.log('component render');
 		let mes;
+		console.log(this.props.answers)
 		const answers = this.props.answers;
 		const rightAnswer = `Правильный ответ: ${ this.state.answerText }`;
 
