@@ -12,7 +12,6 @@ function SetParam(props) {
 	}
 
 	const updateQuest = () => {
-		console.log(questNumber);
 		props.initQuest(questNumber);
 		if (questNumber !== '') { 
 			props.changeItem(questNumber - 1);
