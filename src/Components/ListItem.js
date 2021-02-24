@@ -92,12 +92,12 @@ class ListItem extends Component{
 				mes = '';
 				break;
 		}
-		const listAnswer = answers.map((answer) => 
+		const listAnswer = answers.map((answer, index) => 
 			<ItemAnswer
 				key={ answer.id }
 				val={ answer.answer }
 				idQuest={ this.props.idQuest }
-				idAnsw={ answer.id }
+				idAnsw={ index + 1 }
 				func={ this.setNum }
 				checkAnsw={ this.checkVal }
 				keyAnswer={ this.state.num }/>
