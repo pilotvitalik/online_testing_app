@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react';
 function ItemAnswer(props){
 	const nameAnsw = `quest-${ props.idQuest }`;
 
-	const [activeVal, setActiveVal] = useState(props.idAnsw);
+	const [activeVal, setActiveVal] = useState(props.rightAnsw);
 	const [isChecked, setIsCheked] = useState(false);
 
 	const checkVal = (event) => {
 		setActiveVal(+event.target.value);
+		console.log(+event.target.value);
 		props.func(activeVal);
 	}
 
