@@ -92,7 +92,6 @@ class ListItem extends Component{
 				mes = '';
 				break;
 		}
-
 		const listAnswer = answers.map((answer) => 
 			<ItemAnswer
 				key={ answer.id }
