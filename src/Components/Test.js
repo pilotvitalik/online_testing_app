@@ -12,6 +12,7 @@ class Test extends Component{
 			quest: this.props.questions,
 		}
 		this.defStatus = this.defStatus.bind(this);
+		this.mixArray = this.mixArray.bind(this);
 	}
 
 	componentDidMount(){
@@ -34,11 +35,24 @@ class Test extends Component{
 		});
 	}
 
+	mixArray(arr){
+		console.log(arr);
+		arr.forEach(item => {
+			for (let i = item.answers.length - 1; i > 0; i--) {
+			  let j = Math.floor(Math.random() * (i + 1));
+			  [item.answers[i], item.answers[j]] = [item.answers[j], item.answers[i]];
+			}
+		});
+		return arr
+	}
+
 	render(){
 		let displayEl;
 		const testDone = <h2>Тест пройден</h2>;
 		const arrQuest = this.state.quest;
-		const listItems = arrQuest.map((item, index) => 
+		const mixArrQuest = this.mixArray(arrQuest);
+		console.log(mixArrQuest);
+		const listItems = mixArrQuest.map((item, index) => 
 			index === this.props.startInd ?
 			<ListItem 
 				dataInd={ index }
