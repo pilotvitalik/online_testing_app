@@ -25,23 +25,14 @@ function Main(props) {
 	};
 
 	const resetTest = (quest) => {
-		quest.forEach((item) => {
+		let newQuest = [];
+		quest.forEach((item, index) => {
 			if (item.hasOwnProperty("status_answer"))
 				delete item["status_answer"];
+			if (index <= 19) newQuest.push(item);
 		});
-		setQuest(quest);
-	};
-
-	const setMaxQuest = () => {
-		console.log(quest);
-		let newQuest = [];
-		quest.forEach((index, item) => {
-			if (index <= 19){
-				newQuest.push(item);
-			}
-		})
 		setQuest(newQuest);
-	}
+	};
 
 	const changeType = (isMix, nameTest, questNum) => {
 		resetTest(props[nameTest + "Questions"]);
@@ -55,14 +46,12 @@ function Main(props) {
 			let j = Math.floor(Math.random() * (i + 1));
 			[quest[i], quest[j]] = [quest[j], quest[i]];
 		}
-		setMaxQuest();
 	};
 
 	const changeGlobalMix = () => {
 		let commonTests = props.nodeQuestions.concat(props.oopQuestions);
 		commonTests.push("mixArray");
 		setQuest(commonTests);
-		setMaxQuest();
 	};
 
 	const useAuth = () => {

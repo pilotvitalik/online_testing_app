@@ -46,11 +46,11 @@ class Test extends Component{
 	}
 
 	render(){
+		console.log(this.props.questions);
 		let displayEl;
 		const testDone = <h2>Тест пройден</h2>;
 		const arrQuest = this.state.quest;
 		const mixArrQuest = this.mixArray(arrQuest);
-		console.log(mixArrQuest);
 		const listItems = mixArrQuest.map((item, index) => 
 			index === this.props.startInd ?
 			<ListItem 
