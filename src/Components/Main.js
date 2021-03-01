@@ -21,21 +21,26 @@ function Main(props) {
 	};
 
 	const initQuest = (val) => {
-		setStartQuest(val - 1);
+		setStartQuest(val);
 	};
 
-	const resetTest = (quest) => {
+	const resetTest = (quest, ind) => {
 		let newQuest = [];
+		let startInd = 0;
+		if (ind !== '') startInd = Number(ind);
 		quest.forEach((item, index) => {
 			if (item.hasOwnProperty("status_answer"))
 				delete item["status_answer"];
-			if (index <= 19) newQuest.push(item);
+			if (index >= startInd && index <= (startInd + 19)) newQuest.push(item);
 		});
 		setQuest(newQuest);
 	};
 
 	const changeType = (isMix, nameTest, questNum) => {
-		resetTest(props[nameTest + "Questions"]);
+		console.log(`isMix = ${isMix}`);
+		console.log(`nameTest = ${nameTest}`);
+		console.log(`questNum = ${questNum}`);
+		resetTest(props[nameTest + "Questions"], questNum);
 		if (isMix === "inOrder") {
 			quest.sort((a, b) => {
 				return a.id_quest - b.id_quest;
@@ -75,6 +80,8 @@ function Main(props) {
 			return false;
 		}
 	});
+
+	console.log(startQuest);
 
 	return (
 		<Router>

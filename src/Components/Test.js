@@ -46,7 +46,6 @@ class Test extends Component{
 	}
 
 	render(){
-		console.log(this.props.questions);
 		let displayEl;
 		const testDone = <h2>Тест пройден</h2>;
 		const arrQuest = this.state.quest;
