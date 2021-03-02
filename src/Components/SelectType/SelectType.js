@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import ListContent from "./ListContent.js";
+import ListContent from "./ListContent/ListContent.js";
 
 class SelectType extends Component {
 	constructor(props) {

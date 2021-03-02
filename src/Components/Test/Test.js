@@ -1,9 +1,8 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import ListItem from './ListItem.js';
-import ShowNumQuest from './ShowNumQuest.js';
-import style from './test.module.css';
+import ListItem from './ListItem/ListItem.js';
+import ShowNumQuest from './ShowNumQuest/ShowNumQuest.js';
 
 class Test extends Component{
 	constructor(props){
@@ -71,7 +70,7 @@ class Test extends Component{
 		this.props.startInd !== this.state.quest.length ? displayEl = listItems : displayEl = testDone;
 
 		return(
-			<div className={ style.common }>
+			<div>
 				<ShowNumQuest quest={ this.state.quest } startQuest={ this.props.startQuest }/>
 				{ displayEl }
 				<Link to='/'>Главная</Link>

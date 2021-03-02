@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import SelectType from "./SelectType.js";
-import Test from "./Test.js";
-import SetParam from "./SetParam.js";
+import SelectType from "./SelectType/SelectType.js";
+import Test from "./Test/Test.js";
+import SetParam from "./SetParam/SetParam.js";
 import {
 	BrowserRouter as Router,
 	Switch,
