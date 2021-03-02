@@ -47,10 +47,13 @@ function Main(props) {
 			});
 			return false;
 		}
+		console.log(quest);
 		for (let i = quest.length - 1; i > 0; i--) {
 			let j = Math.floor(Math.random() * (i + 1));
 			[quest[i], quest[j]] = [quest[j], quest[i]];
 		}
+		setQuest(quest);
+		console.log(quest);
 	};
 
 	const changeGlobalMix = () => {
@@ -81,7 +84,7 @@ function Main(props) {
 		}
 	});
 
-	console.log(startQuest);
+	console.log(quest);
 
 	return (
 		<Router>
