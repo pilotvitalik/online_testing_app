@@ -37,9 +37,6 @@ function Main(props) {
 	};
 
 	const changeType = (isMix, nameTest, questNum) => {
-		console.log(`isMix = ${isMix}`);
-		console.log(`nameTest = ${nameTest}`);
-		console.log(`questNum = ${questNum}`);
 		resetTest(props[nameTest + "Questions"], questNum);
 		if (isMix === "inOrder") {
 			quest.sort((a, b) => {
@@ -47,13 +44,11 @@ function Main(props) {
 			});
 			return false;
 		}
-		console.log(quest);
 		for (let i = quest.length - 1; i > 0; i--) {
 			let j = Math.floor(Math.random() * (i + 1));
 			[quest[i], quest[j]] = [quest[j], quest[i]];
 		}
 		setQuest(quest);
-		console.log(quest);
 	};
 
 	const changeGlobalMix = () => {
@@ -83,9 +78,7 @@ function Main(props) {
 			return false;
 		}
 	});
-
-	console.log(quest);
-
+	
 	return (
 		<Router>
 			<Switch>

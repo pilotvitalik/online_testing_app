@@ -37,9 +37,11 @@ class Test extends Component{
 
 	mixArray(arr){
 		arr.forEach(item => {
-			for (let i = item.answers.length - 1; i > 0; i--) {
-			  let j = Math.floor(Math.random() * (i + 1));
-			  [item.answers[i], item.answers[j]] = [item.answers[j], item.answers[i]];
+			if (typeof item !== 'string'){
+				for (let i = item.answers.length - 1; i > 0; i--) {
+				  let j = Math.floor(Math.random() * (i + 1));
+				  [item.answers[i], item.answers[j]] = [item.answers[j], item.answers[i]];
+				}
 			}
 		});
 		return arr
