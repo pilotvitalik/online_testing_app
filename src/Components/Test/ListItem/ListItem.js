@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ItemAnswer from './ItemAnswer.js';
+import ItemAnswer from './ItemAnswer/ItemAnswer.js';
 import style from './listItem.module.css';
 
 class ListItem extends Component{
