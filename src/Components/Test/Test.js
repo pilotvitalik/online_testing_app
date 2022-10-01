@@ -15,7 +15,7 @@ class Test extends Component{
 	}
 
 	componentDidMount(){
-		if (this.state.quest.[this.state.quest.length - 1] === 'commonArray'){
+		if (this.state.quest[this.state.quest.length - 1] === 'commonArray'){
 			this.state.quest.pop();
 		}
 	}
@@ -51,9 +51,9 @@ class Test extends Component{
 		const testDone = <h2>Тест пройден</h2>;
 		const arrQuest = this.state.quest;
 		const mixArrQuest = this.mixArray(arrQuest);
-		const listItems = mixArrQuest.map((item, index) => 
+		const listItems = mixArrQuest.map((item, index) =>
 			index === this.props.startInd ?
-			<ListItem 
+			<ListItem
 				dataInd={ index }
 				question={item.name_quest}
 				key={ item.id_quest }
