@@ -35,7 +35,7 @@ class SelectType extends Component {
 				};
 			});
 			this.props.changeGlobalMix();
-			return false;
+			return;
 		}
 		this.setState(() => {
 			return {
@@ -78,10 +78,7 @@ class SelectType extends Component {
 				</label>
 				<hr />
 				<Link
-					to={{
-						pathname: this.state.param,
-						state: { test_page: this.state.testPage },
-					}}
+					to={{pathname: this.state.param}}
 					onClick={this.setAuth}
 				>
 					{this.state.textBtn}
