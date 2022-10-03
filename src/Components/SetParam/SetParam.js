@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function SetParam(props) {
 	const [questNumber, setQuestNum] = useState('');
 	const [order, setOrder] = useState('inOrder');
-	const location = useLocation();
-	const url = `/test/${ location.state.test_page }`;
+	let params = useParams();
+	const url = `/test/${ params.typeTest }`;
 
 	const changeNum = (event) => {
 		setQuestNum(+event.target.value);
 	}
 
 	const updateQuest = () => {
-		console.log(questNumber);
 		props.initQuest(0);
-		if (questNumber !== '') { 
+		if (questNumber !== '') {
 			props.changeItem(0);
 			setQuestNum(questNumber - 1);
-			props.changeType(order, location.state.test_page, questNumber - 1);
+			props.changeType(order, params.typeTest, questNumber - 1);
 		} else {
 			props.changeItem(0);
 			setQuestNum(0);
-			props.changeType(order, location.state.test_page, questNumber);
+			props.changeType(order, params.typeTest, questNumber);
 		}
 	}
 
@@ -29,7 +28,7 @@ function SetParam(props) {
 		setOrder('inOrder');
 	}
 
-	const changeTypeOrder = (event) => {
+	const changeTypeOrder = () => {
 		if (questNumber !== ''){
 			alert('Нельзя изменять выбранные занчение при указанном номере билета');
 			resetVal();
@@ -38,7 +37,7 @@ function SetParam(props) {
 		setOrder('inOrder');
 	}
 
-	const changeTypeMix = (event) => {
+	const changeTypeMix = () => {
 		if (questNumber !== ''){
 			alert('Нельзя изменять выбранные занчение при указанном номере билета');
 			resetVal();
@@ -51,7 +50,7 @@ function SetParam(props) {
 		<React.Fragment>
 			<div>
 				<label htmlFor='setNumQuest'>
-					Введите номер вопроса: 
+					Введите номер вопроса:
 				</label>
 				<input
 					id='setNumQuest'
@@ -64,34 +63,34 @@ function SetParam(props) {
 				<p>Выберите порядок вопросов:</p>
 				<form>
 					<div>
-						<input 
+						<input
 							id='typeQueue-1'
 							type='radio'
 							value='0'
 							name='queueQuest'
 							checked={ order === 'inOrder' }
 							onChange={ changeTypeOrder }/>
-						<label 
+						<label
 							htmlFor='typeQueue-1'>
 							по порядку
 						</label>
 					</div>
 					<div>
-						<input 
+						<input
 							id='typeQueue-2'
 							type='radio'
 							value='1'
 							name='queueQuest'
 							checked={ order === 'inMix' }
 							onChange={ changeTypeMix }/>
-						<label 
+						<label
 							htmlFor='typeQueue-2'>
 							в перемешку
 						</label>
 					</div>
 				</form>
 			</div>
-				<Link 
+				<Link
 					to={ url }
 					onClick={ updateQuest }>
 						К тестам
