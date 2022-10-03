@@ -8,7 +8,6 @@ function ItemAnswer(props){
 
 	const checkVal = (event) => {
 		setActiveVal(+event.target.value);
-		console.log(+event.target.value);
 		props.func(activeVal);
 	}
 

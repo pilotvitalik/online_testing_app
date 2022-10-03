@@ -4,9 +4,9 @@ import Test from "./Test/Test.js";
 import SetParam from "./SetParam/SetParam.js";
 import {
 	BrowserRouter as Router,
-	Switch,
+	Routes,
 	Route,
-	Redirect,
+	Navigate
 } from "react-router-dom";
 
 function Main(props) {
@@ -62,57 +62,50 @@ function Main(props) {
 	};
 
 	useEffect(() => {
-		if (quest[quest.length - 1] === "mixArray") {
-			quest.pop();
-			for (let i = quest.length - 1; i > 0; i--) {
-				let j = Math.floor(Math.random() * (i + 1));
-				[quest[i], quest[j]] = [quest[j], quest[i]];
-				for (let key in quest[j]) {
-					if (key === "name_test") {
-						quest[j]["vis_name_test"] = quest[j][key];
-						delete quest[j][key];
+			if (quest[quest.length - 1] === "mixArray") {
+				quest.pop();
+				for (let i = quest.length - 1; i > 0; i--) {
+					let j = Math.floor(Math.random() * (i + 1));
+					[quest[i], quest[j]] = [quest[j], quest[i]];
+					for (let key in quest[j]) {
+						if (key === "name_test") {
+							quest[j]["vis_name_test"] = quest[j][key];
+							delete quest[j][key];
+						}
 					}
 				}
+				quest.push("commonArray");
 			}
-			quest.push("commonArray");
-			return false;
-		}
 	});
-	
+
 	return (
 		<Router>
-			<Switch>
-				<Route exact path="/">
-					<SelectType
-						tableContents={tableContents}
-						changeGlobalMix={changeGlobalMix}
-						isAuth={useAuth}
+			<Routes>
+				<Route exact path="/" element={<SelectType
+					tableContents={tableContents}
+					changeGlobalMix={changeGlobalMix}
+					isAuth={useAuth}
+				/>}/>
+				<Route path='/test/:typeTest' element={auth ? (
+					<Test
+						questions={quest}
+						changeItem={changeQuest}
+						startInd={startInd}
+						startQuest={startQuest}
 					/>
-				</Route>
-				<Route path="/param">
-					{auth ? (
-						<SetParam
-							changeItem={changeQuest}
-							changeType={changeType}
-							initQuest={initQuest}
-						/>
-					) : (
-						<Redirect to="/" />
-					)}
-				</Route>
-				<Route path='/test'>
-					{auth ? (
-						<Test 
-							questions={quest}
-							changeItem={changeQuest}
-							startInd={startInd}
-							startQuest={startQuest}
-						/>
-					) : (
-						<Redirect to="/" />
-					)}
-				</Route>
-			</Switch>
+				) : (
+					<Navigate to="/" replace />
+				)}/>
+				<Route path="/param/:typeTest" element={auth ? (
+					<SetParam
+						changeItem={changeQuest}
+						changeType={changeType}
+						initQuest={initQuest}
+					/>
+				) : (
+					<Navigate to="/" replace />
+				)}/>
+			</Routes>
 		</Router>
 	);
 }
